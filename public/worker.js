@@ -1,7 +1,7 @@
 const CACHE_NAME = 'veg-share';
 const urlsToCache = [
   '/',
-
+  '/index.js'
 ];
 
 // Install service worker
