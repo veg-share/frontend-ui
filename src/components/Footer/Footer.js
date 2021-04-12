@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import liLogo from '../../Images/LI-In-Bug.png';
-import ghLogo from '../../Images/Github-Mark-64px.png';
+import ghLogo from '../../Images/GitHub-Mark-Light-64px.png';
 
 const Footer = () => {
   return (
