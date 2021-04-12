@@ -1,5 +1,6 @@
 .footer {
-  background-color: burlywood;
+  background-color: #1E3B3A;
+  color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: space-between;
