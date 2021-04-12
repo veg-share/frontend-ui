@@ -7,8 +7,18 @@
   color: #ffffff;
 }
 
+.veg-share-title {
+  margin-left: 3%;
+}
+
 .profile-link,
 .logout-link {
   color: #ffffff;
   text-decoration: none;
+}
+
+.header-links {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
 }
