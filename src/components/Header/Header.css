@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3C573C;
+  color: #ffffff;
+}
+
+.profile-link,
+.logout-link {
+  color: #ffffff;
+  text-decoration: none;
+}
