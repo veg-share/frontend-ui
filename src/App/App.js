@@ -1,17 +1,18 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import '../components/Header/Header';
-import '../components/Footer/Footer';
-import '../views/HomeView/HomeView';
-import '../views/ProfileView/ProfileView';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import HomeView from '../views/HomeView/HomeView';
+import ProfileView from '../views/ProfileView/ProfileView';
 
 const App = () => {
 
   return (
     <>
       <Header />
-      
+      <Route exact path='/' component={HomeView} />
+      <Route exact path='/profile' component={ProfileView} />
       <Footer />
     </>
   )
