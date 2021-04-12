@@ -1,0 +1,21 @@
+.footer {
+  background-color: burlywood;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dev-links {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.liLogo {
+  width: 4vh;
+}
+
+.ghLogo {
+  width: 4vh;
+}

@@ -5,7 +5,7 @@ import ghLogo from '../../Images/GitHub-Mark-Light-64px.png';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='footer'>
       <div className='dev-links'>
         <h2>Christina Cook</h2>
         <a href="https://github.com/colefiscus">
