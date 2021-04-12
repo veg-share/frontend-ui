@@ -1,8 +1,8 @@
 import React from 'react';
 import './ProfileView.css';
-import UserDetails from '../components/UserDetails';
-import UserInteractions from '../components/UserInteractions';
-import Feed from '../components/Feed';
+import UserDetails from '../../components/UserDetails/UserDetails';
+import UserInteractions from '../../components/UserInteractions/UserInteractions';
+// import Feed from '../../components/Feed/Feed';
 
 const ProfileView = () => {
   return (
@@ -11,7 +11,6 @@ const ProfileView = () => {
       <UserDetails />
       <UserInteractions />
       <h3 className='profile-feed-title'>Posts</h3>
-      <Feed />
     </div>
   )
 }
