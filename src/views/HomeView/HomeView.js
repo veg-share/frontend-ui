@@ -11,5 +11,41 @@ import './HomeView.css';
 // import Feed from '../../components/Feed/Feed';
 // import Post from '../../components/Post/Post';
 
+const HomeView = () => {
+
+  const [allPosts, setAllPosts] = useState([]);
+  const [userLocation, setUserLocation] = useState({});
+  const [error, setError] = useState('');
+
+  const getAllPosts = async () => {
+    // update with URL to request from when avail.
+    const url = '';
+    setError('');
+
+    try {
+      const response = await fetch(url)
+      const allPosts = await response.json()
+      setAllPosts(allPosts);
+    } catch(error) {
+      setError(error.message);
+    }
+  }
+
+  useEffect(() => {
+    getAllPosts();
+  }, [])
+
+  return (
+    <section className='home-view'>
+      
+      <UserInteractions />
+      <FormModal />
+      <Feed />
+
+    </section>
+  )
+
+}
+
 
 export default HomeView;
