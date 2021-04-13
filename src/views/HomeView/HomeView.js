@@ -17,8 +17,22 @@ const HomeView = () => {
   const [userLocation, setUserLocation] = useState({});
   const [error, setError] = useState('');
 
+  const getUserLocation = async () => {
+    // update with URL for geocoding location API
+    const url = '';
+    setError('');
+
+    try {
+      const response = await fetch(url)
+      const userLocation = await response.json()
+      setUserLocation(userLocation);
+    } catch(error) {
+      setError(error.message);
+    }
+  }
+
   const getAllPosts = async () => {
-    // update with URL to request from when avail.
+    // update with URL to BE to request from when avail.
     const url = '';
     setError('');
 
@@ -32,6 +46,7 @@ const HomeView = () => {
   }
 
   useEffect(() => {
+    getUserLocation();
     getAllPosts();
   }, [])
 
@@ -44,8 +59,6 @@ const HomeView = () => {
 
     </section>
   )
-
 }
-
 
 export default HomeView;
