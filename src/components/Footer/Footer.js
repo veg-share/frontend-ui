@@ -8,19 +8,19 @@ const Footer = () => {
     <footer className='footer'>
       <div className='dev-links'>
         <h2>Christina Cook</h2>
-        <a href="https://github.com/colefiscus">
+        <a href="https://github.com/christina-cook">
           <img className="ghLogo" src={ghLogo} />
         </a>
-        <a href="https://www.linkedin.com/in/cole-fiscus-83b4b9ba/">
+        <a href="https://www.linkedin.com/in/cookcmc/">
           <img className="liLogo" src={liLogo}/>
         </a>
       </div>
       <div className='dev-links'>
         <h2>Allison Dietz</h2>
-        <a href="https://github.com/colefiscus">
+        <a href="https://github.com/dietza">
           <img className="ghLogo" src={ghLogo} />
         </a>
-        <a href="https://www.linkedin.com/in/cole-fiscus-83b4b9ba/">
+        <a href="https://www.linkedin.com/in/allison-dietz/">
           <img className="liLogo" src={liLogo}/>
         </a>
       </div>
@@ -29,7 +29,7 @@ const Footer = () => {
         <a href="https://github.com/colefiscus">
           <img className="ghLogo" src={ghLogo} />
         </a>
-        <a href="https://www.linkedin.com/in/cole-fiscus-83b4b9ba/">
+        <a href="https://www.linkedin.com/in/colefiscus/">
           <img className="liLogo" src={liLogo}/>
         </a>
       </div>
