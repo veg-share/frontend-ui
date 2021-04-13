@@ -7,7 +7,9 @@ import './FormModal.css';
 // import Search from '../../components/Search/Search';
 
 const FormModal = () => {
-
+  return (
+    <h2>Form modal goes here</h2>
+  )
 }
 
 export default FormModal;

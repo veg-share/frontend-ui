@@ -6,10 +6,10 @@ import './HomeView.css';
 
 // import Header from '../../components/Header/Header';
 // import Footer from '../../components/Footer/Footer';
-// import UserInteractions from '../../components/UserInteractions/UserInteractions';
-// import FormModal from '../../components/FormModal/FormModal';
+import UserInteractions from '../../components/UserInteractions/UserInteractions';
+import FormModal from '../../components/FormModal/FormModal';
 // import Search from '../../components/Search/Search';
-// import Feed from '../../components/Feed/Feed';
+import Feed from '../../components/Feed/Feed';
 // import Post from '../../components/Post/Post';
 
 const HomeView = () => {
@@ -53,7 +53,7 @@ const HomeView = () => {
 
   return (
     <section className='home-view'>
-      
+
       <UserInteractions />
       <FormModal />
       <Feed />
