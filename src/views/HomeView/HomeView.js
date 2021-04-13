@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './HomeView.css';
+
 // import Header from '../../components/Header/Header';
 // import Footer from '../../components/Footer/Footer';
 // import UserInteractions from '../../components/UserInteractions/UserInteractions';
