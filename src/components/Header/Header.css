@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3C573C;
+  color: #ffffff;
+}
+
+.veg-share-title {
+  margin-left: 3%;
+}
+
+.profile-link,
+.home-link,
+.logout-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-links {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
