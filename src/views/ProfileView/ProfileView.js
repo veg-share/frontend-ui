@@ -3,7 +3,7 @@ import './ProfileView.css';
 import UserDetails from '../../components/UserDetails/UserDetails';
 import UserInteractions from '../../components/UserInteractions/UserInteractions';
 import Feed from '../../components/Feed/Feed';
-import user from '../../Data/mockData';
+import { user } from '../../Data/mockData';
 
 const ProfileView = () => {
   const [currentUser, setCurrentUser] = useState({})
