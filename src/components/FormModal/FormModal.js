@@ -8,7 +8,34 @@ import './FormModal.css';
 
 const FormModal = () => {
   return (
-    <h2>Form modal goes here</h2>
+    // <h2>Form modal goes here</h2>
+
+    <article className="form-modal">
+      <form className="form">
+
+        <input
+          className="post__title-input"
+          type="text"
+          name="title-input"
+          placeholder="Title"
+          value={ this.state.title }
+          aria-label="field to input title of post"
+          // onChange={ (event) => this.handleChange(event) }
+        >
+
+        <input
+          className="post__description-input"
+          type="text"
+          name="description-input"
+          placeholder="Please provide a brief description"
+          value={ this.state.description }
+          aria-label="field to input description of post"
+          // onChange={ (event) => this.handleChange(event) }
+        >
+
+      </form>
+    </article>
+
   )
 }
 
