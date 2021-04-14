@@ -1,3 +1,16 @@
 .interactions-container {
-  border: 2px solid green;
+  width: 50%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.post-button {
+  width: 50%;
+  padding: 0.5rem;
+  background-color: #99AE92;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
