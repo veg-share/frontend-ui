@@ -6,7 +6,7 @@ import './Feed.css';
 import Post from '../../components/Post/Post';
 import { user, posts } from '../../Data/mockData';
 
-const Feed = () => {
+const Feed = ({ profileIsVisible }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
   const [allPosts, setAllPosts] = useState([])
 
@@ -37,7 +37,7 @@ const Feed = () => {
     <div className='post-container'>
       {/* Conditionally render the feed to only display all posts on the home page
         and the current user's posts on the profile page */}
-      {displayPostsForCurrentUser(currentUserPosts)}
+      {profileIsVisible ? displayPostsForCurrentUser(currentUserPosts) : displayPostsForCurrentUser(allPosts)}
     </div>
   )
 }

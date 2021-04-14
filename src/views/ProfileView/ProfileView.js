@@ -7,9 +7,11 @@ import { user } from '../../Data/mockData';
 
 const ProfileView = () => {
   const [currentUser, setCurrentUser] = useState({})
+  const [profileIsVisible, setProfileIsVisible] = useState(false)
 
   useEffect(() => {
     setCurrentUser(user)
+    setProfileIsVisible(true)
   }, [])
 
   return (
@@ -18,7 +20,7 @@ const ProfileView = () => {
       <div className='feed-container'>
         <UserInteractions />
         <h3 className='feed-title'>Posts</h3>
-        <Feed />
+        <Feed profileIsVisible={profileIsVisible}/>
       </div>
     </div>
   )
