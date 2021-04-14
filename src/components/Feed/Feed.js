@@ -35,6 +35,8 @@ const Feed = () => {
 
   return (
     <div className='post-container'>
+      {/* Conditionally render the feed to only display all posts on the home page
+        and the current user's posts on the profile page */}
       {displayPostsForCurrentUser(currentUserPosts)}
     </div>
   )
