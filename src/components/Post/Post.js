@@ -15,6 +15,11 @@ const Post = ({ userName, title, date, location, description, distance, imageUrl
           <p className='post-date'>{date}</p>
         </div>
       </div>
+      <div className='post-body'>
+        <p className='post-title'>{title}</p>
+        <p className='post-description'>{description}</p>
+        <img src={imageUrl} alt={title} className='post-image'/>
+      </div>
     </div>
   )
 }
