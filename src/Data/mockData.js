@@ -48,6 +48,7 @@ export const user = {
       userID: 2,
       userName: 'Duckie',
       title: 'Too many onions!',
+      date: 'June 20, 2020',
       description: '4 onions, all are good condition.',
       location: 'Denver, CO',
       distance: '~3.4 miles',
@@ -57,6 +58,7 @@ export const user = {
       userID: 2,
       userName: 'Duckie',
       title: 'Too many carrots!',
+      date: 'August 5, 2020',
       description: '9 carrots, all are good condition.',
       location: 'Denver, CO',
       distance: '~3.4 miles',
@@ -64,5 +66,3 @@ export const user = {
     }
   ]
 }
-
-export default user;
