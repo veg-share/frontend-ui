@@ -14,7 +14,6 @@ const ProfileView = () => {
 
   return (
     <div className='profile-page'>
-      <h2 className='user-name'>{currentUser.name}</h2>
       <UserDetails user={currentUser}/>
       <div className='feed-container'>
         <UserInteractions />

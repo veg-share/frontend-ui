@@ -8,6 +8,7 @@ const UserDetails = ({user}) => {
   return (
     <div className='user-container'>
       <img src={profilePic} alt='profile-picture' className='profile-pic'/>
+      <h2 className='user-name'>{user.name}</h2>
       <div className='user-details'>
         <div className='location-container'>
           <img src={homeIcon} alt='house' className='home-img'/>
