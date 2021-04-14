@@ -11,11 +11,10 @@ const Feed = () => {
   const [allPosts, setAllPosts] = useState([])
 
   useEffect(() => {
-    const userPosts = user.posts
-    setCurrentUserPosts(userPosts)
+    setCurrentUserPosts(user.posts)
     setAllPosts(posts)
-    console.log('currentUserPosts', currentUserPosts)
-    console.log('allPosts', allPosts)
+    // console.log('currentUserPosts', currentUserPosts)
+    // console.log('allPosts', allPosts)
   }, [currentUserPosts, allPosts])
 
   const displayPostsForCurrentUser = (postsToDisplay) => {
