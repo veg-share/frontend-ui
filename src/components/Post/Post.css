@@ -1,3 +1,27 @@
+.post-date {
+  font-size: 0.5rem;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-name {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.post-name,
+.post-date {
+  margin: 0.25rem 0 0 0.5rem;
+}
+
+.post-top {
+  display: flex;
+  flex-direction: column;
+}
+
 .single-post {
   padding: 1rem;
   width: 45%;
@@ -7,7 +31,8 @@
 }
 
 .small-profile-pic {
-  width: 25px;
+  width: 35px;
+  height: 35px;
   border: 2px solid #EFEDE8;
   border-radius: 100%
 }

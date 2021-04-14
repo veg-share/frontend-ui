@@ -10,8 +10,10 @@ const Post = ({ userName, title, date, location, description, distance, imageUrl
     <div className='single-post'>
       <div className='post-header'>
         <img src={profilePic} alt='small-profile' className='small-profile-pic'/>
-        <p className='post-name'>{userName}</p>
-        <p className='post-date'>{date}</p>
+        <div className='post-top'>
+          <p className='post-name'>{userName}</p>
+          <p className='post-date'>{date}</p>
+        </div>
       </div>
     </div>
   )
