@@ -1,0 +1,13 @@
+.single-post {
+  padding: 1rem;
+  width: 45%;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0.25rem;
+}
+
+.small-profile-pic {
+  width: 25px;
+  border: 2px solid #EFEDE8;
+  border-radius: 100%
+}
