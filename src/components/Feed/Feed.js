@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 
 import './Feed.css';
 import Post from '../../components/Post/Post';
-import { user } from '../../Data/mockData';
+import { user, posts } from '../../Data/mockData';
 
 const Feed = () => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
+  const [allPosts, setAllPosts] = useState([])
 
   useEffect(() => {
-    console.log('user.posts', user.posts)
     const userPosts = user.posts
-    console.log('user posts', userPosts)
     setCurrentUserPosts(userPosts)
+    setAllPosts(posts)
     console.log('currentUserPosts', currentUserPosts)
-  }, [currentUserPosts])
+    console.log('allPosts', allPosts)
+  }, [currentUserPosts, allPosts])
 
   const displayPostsForCurrentUser = (postsToDisplay) => {
     return postsToDisplay.map(post => {
