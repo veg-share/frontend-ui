@@ -1,3 +1,7 @@
 .profile-page {
   border: 2px solid pink;
 }
+
+.user-name {
+  text-align: center;
+}
