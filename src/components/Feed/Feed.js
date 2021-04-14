@@ -15,7 +15,7 @@ const Feed = ({ profileIsVisible }) => {
     setAllPosts(posts)
   }, [currentUserPosts, allPosts])
 
-  const displayPostsForCurrentUser = (postsToDisplay) => {
+  const displayPostsInFeed = (postsToDisplay) => {
     return postsToDisplay.map(post => {
       return (
         <Post
@@ -33,7 +33,7 @@ const Feed = ({ profileIsVisible }) => {
 
   return (
     <div className='post-container'>
-      {profileIsVisible ? displayPostsForCurrentUser(currentUserPosts) : displayPostsForCurrentUser(allPosts)}
+      {profileIsVisible ? displayPostsInFeed(currentUserPosts) : displayPostsInFeed(allPosts)}
     </div>
   )
 }
