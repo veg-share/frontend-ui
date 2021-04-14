@@ -13,8 +13,6 @@ const Feed = ({ profileIsVisible }) => {
   useEffect(() => {
     setCurrentUserPosts(user.posts)
     setAllPosts(posts)
-    // console.log('currentUserPosts', currentUserPosts)
-    // console.log('allPosts', allPosts)
   }, [currentUserPosts, allPosts])
 
   const displayPostsForCurrentUser = (postsToDisplay) => {
@@ -35,8 +33,6 @@ const Feed = ({ profileIsVisible }) => {
 
   return (
     <div className='post-container'>
-      {/* Conditionally render the feed to only display all posts on the home page
-        and the current user's posts on the profile page */}
       {profileIsVisible ? displayPostsForCurrentUser(currentUserPosts) : displayPostsForCurrentUser(allPosts)}
     </div>
   )
