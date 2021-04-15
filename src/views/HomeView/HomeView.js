@@ -8,6 +8,7 @@ import FormModal from '../../components/FormModal/FormModal';
 import Feed from '../../components/Feed/Feed';
 
 const HomeView = () => {
+  const [isHome, setIsHome] = useState(false)
   // const [allPosts, setAllPosts] = useState([]);
   // const [userLocation, setUserLocation] = useState({});
   // const [error, setError] = useState('');
@@ -40,15 +41,15 @@ const HomeView = () => {
   //   }
   // }
 
-  // useEffect(() => {
-  //   // getUserLocation();
-  //   // getAllPosts();
-  //   }, [])
+  useEffect(() => {
+    setIsHome(true)
+    // getUserLocation();
+    // getAllPosts();
+    }, [])
 
   return (
     <section className='home-view'>
-      <UserInteractions />
-      <FormModal />
+      <UserInteractions isHome={isHome}/>
       <Feed />
     </section>
   )
