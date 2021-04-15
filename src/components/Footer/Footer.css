@@ -6,6 +6,11 @@
   justify-content: space-between;
 }
 
+.footer-text {
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
+}
+
 .dev-links {
   width: 30%;
   display: flex;
@@ -14,9 +19,14 @@
 }
 
 .liLogo {
-  width: 4vh;
+  width: 3vh;
 }
 
 .ghLogo {
-  width: 4vh;
+  width: 3vh;
+}
+
+.liLogo,
+.ghLogo {
+  margin: 0.25rem;
 }

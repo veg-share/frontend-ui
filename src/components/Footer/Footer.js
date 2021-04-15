@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='dev-links'>
-        <h2>Aiden Mendez</h2>
+        <h2 className='footer-text'>Aiden Mendez</h2>
         <a href="https://github.com/aidenmendez">
           <img className="ghLogo" src={ghLogo} />
         </a>
@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
       </div>
       <div className='dev-links'>
-        <h2>Allison Dietz</h2>
+        <h2 className='footer-text'>Allison Dietz</h2>
         <a href="https://github.com/dietza">
           <img className="ghLogo" src={ghLogo} />
         </a>
@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
       </div>
       <div className='dev-links'>
-        <h2>Christina Cook</h2>
+        <h2 className='footer-text'>Christina Cook</h2>
         <a href="https://github.com/christina-cook">
           <img className="ghLogo" src={ghLogo} />
         </a>
@@ -34,7 +34,7 @@ const Footer = () => {
         </a>
       </div>
       <div className='dev-links'>
-        <h2>Cole Fiscus</h2>
+        <h2 className='footer-text'>Cole Fiscus</h2>
         <a href="https://github.com/colefiscus">
           <img className="ghLogo" src={ghLogo} />
         </a>
@@ -43,7 +43,7 @@ const Footer = () => {
         </a>
       </div>
       <div className='dev-links'>
-        <h2>Grayson Myers</h2>
+        <h2 className='footer-text'>Grayson Myers</h2>
         <a href="https://github.com/GrayMyers">
           <img className="ghLogo" src={ghLogo} />
         </a>
