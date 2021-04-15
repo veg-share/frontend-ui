@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='dev-links'>
-        <h2>Christina Cook</h2>
-        <a href="https://github.com/christina-cook">
+        <h2>Aiden Mendez</h2>
+        <a href="https://github.com/aidenmendez">
           <img className="ghLogo" src={ghLogo} />
         </a>
-        <a href="https://www.linkedin.com/in/cookcmc/">
+        <a href="https://www.linkedin.com/in/aiden-mendez/">
           <img className="liLogo" src={liLogo}/>
         </a>
       </div>
@@ -25,11 +25,29 @@ const Footer = () => {
         </a>
       </div>
       <div className='dev-links'>
+        <h2>Christina Cook</h2>
+        <a href="https://github.com/christina-cook">
+          <img className="ghLogo" src={ghLogo} />
+        </a>
+        <a href="https://www.linkedin.com/in/cookcmc/">
+          <img className="liLogo" src={liLogo}/>
+        </a>
+      </div>
+      <div className='dev-links'>
         <h2>Cole Fiscus</h2>
         <a href="https://github.com/colefiscus">
           <img className="ghLogo" src={ghLogo} />
         </a>
         <a href="https://www.linkedin.com/in/colefiscus/">
+          <img className="liLogo" src={liLogo}/>
+        </a>
+      </div>
+      <div className='dev-links'>
+        <h2>Grayson Myers</h2>
+        <a href="https://github.com/GrayMyers">
+          <img className="ghLogo" src={ghLogo} />
+        </a>
+        <a href="https://www.linkedin.com/in/grayson-myers-285926165/">
           <img className="liLogo" src={liLogo}/>
         </a>
       </div>
