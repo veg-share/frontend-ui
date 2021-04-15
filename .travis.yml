@@ -13,8 +13,8 @@ deploy:
 on:
   branch: main
 
-app: veg-share
-skip_cleanup: true
+  app: veg-share
+  skip_cleanup: true
 
 addons:
   apt:
