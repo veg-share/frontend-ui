@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProfileView.css';
 import UserDetails from '../../components/UserDetails/UserDetails';
 import UserInteractions from '../../components/UserInteractions/UserInteractions';
-// import Feed from '../../components/Feed/Feed';
+import Feed from '../../components/Feed/Feed';
+import { user } from '../../Data/mockData';
 
 const ProfileView = () => {
+  const [currentUser, setCurrentUser] = useState({})
+  const [profileIsVisible, setProfileIsVisible] = useState(false)
+
+  useEffect(() => {
+    setCurrentUser(user)
+    setProfileIsVisible(true)
+  }, [])
+
   return (
     <div className='profile-page'>
-      <h2 className='profile-title'>Profile</h2>
-      <UserDetails />
-      <UserInteractions />
-      <h3 className='profile-feed-title'>Posts</h3>
+      <UserDetails user={currentUser}/>
+      <div className='feed-container'>
+        <UserInteractions />
+        <h3 className='feed-title'>Posts</h3>
+        <Feed profileIsVisible={profileIsVisible}/>
+      </div>
     </div>
   )
 }

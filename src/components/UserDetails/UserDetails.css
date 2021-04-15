@@ -1,3 +1,37 @@
+.home-img,
+.veggie-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
+
+.location-container,
+.shares-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #EFEDE8;
+  border-radius: 100%
+}
+
 .user-container {
-  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.user-details {
+  text-align: center;
+}
+
+.user-name {
+  text-align: center;
+  margin-bottom: 0.75rem;
 }

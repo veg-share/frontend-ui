@@ -7,7 +7,7 @@ const UserInteractions = () => {
   return (
     <div className='interactions-container'>
       {/* conditionally render search component based on view */}
-      <button>Post</button>
+      <button className='post-button'>Create Post</button>
     </div>
   )
 }
