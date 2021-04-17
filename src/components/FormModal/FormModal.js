@@ -21,7 +21,7 @@ const FormModal = () => {
           value={ this.state.title }
           aria-label="field to input title of post"
           // onChange={ (event) => this.handleChange(event) }
-        >
+        />
 
         <input
           className="post__description-input"
@@ -31,7 +31,7 @@ const FormModal = () => {
           value={ this.state.description }
           aria-label="field to input description of post"
           // onChange={ (event) => this.handleChange(event) }
-        >
+        />
 
       </form>
     </article>
