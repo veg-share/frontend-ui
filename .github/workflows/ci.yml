@@ -1,7 +1,8 @@
 name: ci
 on: [push, deployment, deployment_status]
 jobs:
-  show-event:
+  e2e:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
