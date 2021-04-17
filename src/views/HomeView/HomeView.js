@@ -6,51 +6,28 @@ import './HomeView.css';
 import UserInteractions from '../../components/UserInteractions/UserInteractions';
 import FormModal from '../../components/FormModal/FormModal';
 import Feed from '../../components/Feed/Feed';
+import { user } from '../../Data/mockData';
 
 const HomeView = () => {
+  const [currentUser, setCurrentUser] = useState({})
   const [isHome, setIsHome] = useState(false)
-  // const [allPosts, setAllPosts] = useState([]);
-  // const [userLocation, setUserLocation] = useState({});
-  // const [error, setError] = useState('');
 
-  // const getUserLocation = async () => {
-  //   // update with URL for geocoding location API
-  //   const url = '';
-  //   setError('');
-  //
-  //   try {
-  //     const response = await fetch(url)
-  //     const userLocation = await response.json()
-  //     setUserLocation(userLocation);
-  //   } catch(error) {
-  //     setError(error.message);
-  //   }
-  // }
-  //
-  // const getAllPosts = async () => {
-  //   // update with URL to BE to request from when avail.
-  //   const url = '';
-  //   setError('');
-  //
-  //   try {
-  //     const response = await fetch(url)
-  //     const allPosts = await response.json()
-  //     setAllPosts(allPosts);
-  //   } catch(error) {
-  //     setError(error.message);
-  //   }
-  // }
+
 
   useEffect(() => {
+    setCurrentUser(user)
     setIsHome(true)
-    // getUserLocation();
-    // getAllPosts();
     }, [])
 
   return (
     <section className='home-view'>
-      <UserInteractions isHome={isHome}/>
-      <Feed />
+
+      <section className='feed-container'>
+        <UserInteractions isHome={isHome}/>
+        <h3 className='feed-title'>All Posts</h3>
+        <Feed isHome={isHome}/>
+      </section>
+
     </section>
   )
 }
