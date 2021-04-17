@@ -4,7 +4,7 @@ describe('VegShare, main page view', () => {
   })
   it ('should have the correct url for the home page on load', () => {
     cy
-      .url().should('eq', `http://localhost:3000/`)
+      .url().should('eq', `http://localhost:3000`)
   });
   it ('should show the site header', () => {
     cy
