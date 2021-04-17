@@ -33,7 +33,7 @@ const Feed = ({ profileIsVisible }) => {
     } else {
       return (
         <section className='no-user-posts-message'>
-          <p>Looks like you haven't made any shares yet. Click the 'Create Post' button above to join the party!</p>
+          <p>Looks like there are no shares here. Press the 'Create Post' button to join the party!</p>
         </section>
       )
     }

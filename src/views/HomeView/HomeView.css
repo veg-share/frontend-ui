@@ -1,4 +1,5 @@
 .home-view {
+  min-height: 75vh;
   background-color: #EFEDE8;
   display: flex;
   flex-direction: column;
