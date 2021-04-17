@@ -11,7 +11,7 @@ const Feed = ({ profileIsVisible }) => {
   const [allPosts, setAllPosts] = useState([])
 
   useEffect(() => {
-    // setCurrentUserPosts(user.posts)
+    setCurrentUserPosts(user.posts)
     setAllPosts(posts)
   }, [currentUserPosts, allPosts])
 
