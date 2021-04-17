@@ -3,13 +3,20 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+  const toggleLink = () => {
+    const homeLink = document.querySelector('.home-link')
+    const profileLink = document.querySelector('.profile-link')
+    homeLink.classList.toggle('hidden')
+    profileLink.classList.toggle('hidden')
+  }
+
   return (
     <header className='header'>
       <h1 className='veg-share-title'>Garden Party</h1>
       <div className='header-links'>
-        <Link className='home-link' to='/'>Home</Link>
-        <hr className='header-line' />
-        <Link className='profile-link' to='/profile'>Profile</Link>
+        <Link className='home-link hidden' to='/' onClick={() => toggleLink()}>To Home</Link>
+        <Link className='profile-link' to='/profile' onClick={() => toggleLink()}>To Profile</Link>
       </div>
     </header>
   )
