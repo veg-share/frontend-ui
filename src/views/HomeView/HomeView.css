@@ -1,3 +1,7 @@
 .home-view {
-  border: 2px solid pink;
+  background-color: #EFEDE8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
 }

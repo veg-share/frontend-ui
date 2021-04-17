@@ -1,0 +1,62 @@
+.post-body {
+  width: 100%;
+}
+
+.post-date {
+  font-size: 0.5rem;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-name {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.post-name,
+.post-date {
+  margin: 0.25rem 0 0 0.5rem;
+}
+
+.post-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.post-description {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.post-title,
+.post-description {
+  margin-left: 0.25rem;
+}
+
+.post-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-post {
+  padding: 1rem;
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0.25rem;
+}
+
+.small-profile-pic {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #EFEDE8;
+  border-radius: 100%
+}
