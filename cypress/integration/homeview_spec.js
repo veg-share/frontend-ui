@@ -8,6 +8,6 @@ describe('VegShare, main page view', () => {
   });
   it ('should show the site header', () => {
     cy
-      .get('header .veg-share-title').should('contain', 'Veg-Share')
+      .get('header .veg-share-title').should('contain', 'Garden Party')
   });
 })
