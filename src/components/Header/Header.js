@@ -15,11 +15,11 @@ const Header = () => {
     <header className='header'>
       <h1 className='veg-share-title'>Garden Party</h1>
       <div className='header-links'>
-        <button className='home-link hidden'>
-          <Link className='home-link hidden' to='/' onClick={() => toggleLink()}>To Home</Link>
+        <button className='home-link link-button hidden'>
+          <Link className='home-link hidden' to='/' onClick={() => toggleLink()}>Home</Link>
         </button>
-        <button className='profile-link'>
-          <Link className='profile-link' to='/profile' onClick={() => toggleLink()}>To Profile</Link>
+        <button className='profile-link link-button'>
+          <Link className='profile-link' to='/profile' onClick={() => toggleLink()}>Profile</Link>
         </button>
       </div>
     </header>
