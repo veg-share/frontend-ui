@@ -56,7 +56,7 @@ const HomeView = () => {
   return (
     <section className='home-view'>
       <UserInteractions isHome={isHome} determineSearchResults={determineSearchResults}/>
-      <Feed />
+      <Feed searchResults={searchResults}/>
     </section>
   )
 }

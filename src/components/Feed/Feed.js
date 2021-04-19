@@ -8,7 +8,7 @@ import { user } from '../../Data/mockData';
 import AppContext from '../../Context/AppContext';
 
 
-const Feed = ({ profileIsVisible }) => {
+const Feed = ({ profileIsVisible, searchResults }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
   // const [allPosts, setAllPosts] = useState([])
   const allPosts = useContext(AppContext)
@@ -36,7 +36,8 @@ const Feed = ({ profileIsVisible }) => {
 
   return (
     <div className='post-container'>
-      {profileIsVisible ? displayPostsInFeed(currentUserPosts) : displayPostsInFeed(allPosts)}
+      {profileIsVisible && displayPostsInFeed(currentUserPosts)}
+      {searchResults.length ? displayPostsInFeed(searchResults) : displayPostsInFeed(allPosts)}
     </div>
   )
 }
