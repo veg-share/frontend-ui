@@ -9,6 +9,7 @@ import Feed from '../../components/Feed/Feed';
 
 const HomeView = () => {
   const [isHome, setIsHome] = useState(false)
+  const [searchResults, setSearchResults] = useState([])
   // const [allPosts, setAllPosts] = useState([]);
   // const [userLocation, setUserLocation] = useState({});
   // const [error, setError] = useState('');
@@ -47,9 +48,14 @@ const HomeView = () => {
     // getAllPosts();
     }, [])
 
+  const determineSearchResults = (posts) => {
+    setSearchResults(posts)
+    console.log('searchResults', searchResults)
+  }
+
   return (
     <section className='home-view'>
-      <UserInteractions isHome={isHome}/>
+      <UserInteractions isHome={isHome} determineSearchResults={determineSearchResults}/>
       <Feed />
     </section>
   )

@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import './Search.css';
 import AppContext from '../../Context/AppContext';
 
-const Search = () => {
+const Search = ({ determineSearchResults }) => {
   // props needed for search funtionality: allPosts
   // might try using context instead of having to pass these all the way down
   // we'll also need access to a method on the feed component that determines which posts to display based on the search term
@@ -28,6 +28,7 @@ const Search = () => {
     })
     console.log('postsToDisplay', postsToDisplay)
     // call a method to determine which posts to display (I think this method would live in the feed component)
+    determineSearchResults(postsToDisplay)
   }
 
   return (
