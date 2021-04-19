@@ -16,8 +16,10 @@ const Feed = ({ profileIsVisible, searchResults }) => {
     setCurrentUserPosts(user.posts)
   }, [currentUserPosts])
 
-  const displayPostsInFeed = (postsToDisplay) => {
-    return postsToDisplay.map(post => {
+  let postsToDisplay
+
+  const displayPostsInFeed = (posts) => {
+    return postsToDisplay = posts.map(post => {
       return (
         <Post
           userName={post.userName}
@@ -32,10 +34,17 @@ const Feed = ({ profileIsVisible, searchResults }) => {
     })
   }
 
+  if (profileIsVisible) {
+    displayPostsInFeed(currentUserPosts)
+  } else if (searchResults.length) {
+    displayPostsInFeed(searchResults)
+  } else {
+    displayPostsInFeed(allPosts)
+  }
+
   return (
     <div className='post-container'>
-      {profileIsVisible && displayPostsInFeed(currentUserPosts)}
-      {searchResults.length ? displayPostsInFeed(searchResults) : displayPostsInFeed(allPosts)}
+      {postsToDisplay}
     </div>
   )
 }
