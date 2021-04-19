@@ -9,18 +9,19 @@ const UserInteractions = ({ isHome }) => {
   const [formModalIsOpen, setFormModal] = useState(false)
 
   const toggleFormModal = () => {
-
     console.log('MODAL - IS OPEN? >>> ', formModalIsOpen);
-
     const modalStatus = formModalIsOpen === false ? true : false;
     setFormModal(modalStatus)
   }
 
   return (
-    <div className='interactions-container'>
+    <section className='interactions-container'>
       {isHome && <Search />}
       <button className='post-button' onClick={toggleFormModal}>Create Post</button>
-    </div>
+      <article className='form-modal'>
+      {formModalIsOpen && <FormModal />}
+    </article>
+    </section>
   )
 }
 
