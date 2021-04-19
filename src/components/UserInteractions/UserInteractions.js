@@ -4,7 +4,7 @@ import Search from '../Search/Search';
 import PropTypes from 'prop-types';
 import FormModal from '../FormModal/FormModal';
 
-const UserInteractions = ({ isHome }) => {
+const UserInteractions = ({ isHome, user }) => {
 
   const [formModalIsOpen, setFormModal] = useState(false)
 
@@ -17,9 +17,9 @@ const UserInteractions = ({ isHome }) => {
   return (
     <section className='interactions-container'>
       {isHome && <Search />}
-      <button className='post-button' onClick={toggleFormModal}>Create Post</button>
+      <button className='create-post-button' onClick={toggleFormModal}>Create Post</button>
       <article className='form-modal'>
-      {formModalIsOpen && <FormModal />}
+      {formModalIsOpen && <FormModal user={user}/>}
     </article>
     </section>
   )

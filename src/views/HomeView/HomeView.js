@@ -22,7 +22,7 @@ const HomeView = () => {
     <section className='home-view'>
 
       <section className='feed-container'>
-        <UserInteractions isHome={isHome}/>
+        <UserInteractions isHome={isHome} user={currentUser}/>
         <h3 className='feed-title'>All Posts</h3>
         <Feed isHome={isHome}/>
       </section>

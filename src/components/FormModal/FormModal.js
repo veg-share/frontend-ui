@@ -5,7 +5,37 @@ import PropTypes from 'prop-types';
 import './FormModal.css';
 // import Search from '../../components/Search/Search';
 
-const FormModal = () => {
+const FormModal = ({ user }) => {
+  const [title, setPostTitle] = useState('')
+  const [description, setPostDescription] = useState('')
+  const [image, setPostImgUrl] = useState('')
+
+  const submitPost = event => {
+    event.preventDefault();
+    const newPost = {
+      id: Date.now(),
+      postedById: user.id,
+      postedBy: user.name,
+      location: user.location,
+      title,
+      description,
+      image
+    }
+
+    console.log("POST to be submitted! >>> ", newPost)
+
+    // props.addPost(newPost);
+    //// create (/ & pass in) a function which will actually sent this post in a request to the BE
+
+    clearInputs();
+  }
+
+  const clearInputs = () => {
+    setPostTitle('')
+    setPostDescription('')
+    setPostImgUrl('')
+  }
+
   return (
 
     <article className="form-modal">
@@ -19,6 +49,7 @@ const FormModal = () => {
           value={ title } 
           aria-required="true" 
           aria-label="field to input title of post"
+          onChange={event => setPostTitle(event.target.value)}
         />
 
         <input
@@ -29,6 +60,7 @@ const FormModal = () => {
           value={ description } 
           aria-required="true" 
           aria-label="field to input description of post"
+          onChange={event => setPostDescription(event.target.value)}
         />
 
         <input
@@ -39,6 +71,7 @@ const FormModal = () => {
           value={ image } 
           aria-required="true" 
           aria-label="field to input link for image to upload"
+          onChange={event => setPostImgUrl(event.target.value)}
         />
 {/* 
         <input
@@ -58,6 +91,8 @@ const FormModal = () => {
           value={ weight }
           aria-label="field to input amount per item offered in lbs"
         /> */}
+
+      <button className='submit-post-button' onClick={event => submitPost(event)}>Create Post</button>
 
       </form>
     </article>
