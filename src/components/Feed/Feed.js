@@ -10,12 +10,10 @@ import AppContext from '../../Context/AppContext';
 
 const Feed = ({ profileIsVisible, searchResults }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
-  // const [allPosts, setAllPosts] = useState([])
   const allPosts = useContext(AppContext)
 
   useEffect(() => {
     setCurrentUserPosts(user.posts)
-    // setAllPosts(posts)
   }, [currentUserPosts])
 
   const displayPostsInFeed = (postsToDisplay) => {
