@@ -31,6 +31,12 @@ const Search = ({ determineSearchResults }) => {
     determineSearchResults(postsToDisplay)
   }
 
+  const clearSearch = (event) => {
+    event.preventDefault()
+    setSearchInput('')
+    determineSearchResults([])
+  }
+
   return (
     <form className='search' onSubmit={handleSubmit}>
       <input
@@ -44,6 +50,11 @@ const Search = ({ determineSearchResults }) => {
         className='search-button'>
         <i className="fa fa-search"></i>
       </button>
+      <button
+        className='clear-button'
+        onClick={clearSearch}>
+        Clear Search
+        </button>
     </form>
   )
 }
