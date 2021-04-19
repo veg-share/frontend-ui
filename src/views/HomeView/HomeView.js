@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import './HomeView.css';
 
 import UserInteractions from '../../components/UserInteractions/UserInteractions';
-import FormModal from '../../components/FormModal/FormModal';
 import Feed from '../../components/Feed/Feed';
 import { user } from '../../Data/mockData';
 
