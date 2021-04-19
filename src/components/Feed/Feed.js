@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './Feed.css';
 import Post from '../../components/Post/Post';
-import { user, posts } from '../../Data/mockData';
+import { user } from '../../Data/mockData';
+import AppContext from '../../Context/AppContext';
+
 
 const Feed = ({ profileIsVisible }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
-  const [allPosts, setAllPosts] = useState([])
+  // const [allPosts, setAllPosts] = useState([])
+  const allPosts = useContext(AppContext)
 
   useEffect(() => {
     setCurrentUserPosts(user.posts)
-    setAllPosts(posts)
-  }, [currentUserPosts, allPosts])
+    // setAllPosts(posts)
+  }, [currentUserPosts])
 
   const displayPostsInFeed = (postsToDisplay) => {
     return postsToDisplay.map(post => {
