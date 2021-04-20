@@ -5,7 +5,7 @@ import FormModal from '../FormModal/FormModal';
 
 import './UserInteractions.css';
 
-const UserInteractions = ({ isHome, user }) => {
+const UserInteractions = ({ isHome, user, determineSearchResults }) => {
 
   const [formModalIsOpen, setFormModal] = useState(false)
 
@@ -17,7 +17,7 @@ const UserInteractions = ({ isHome, user }) => {
 
   return (
     <section className='interactions-container'>
-      {isHome && <Search />}
+      {isHome && <Search determineSearchResults={determineSearchResults} />}
       <button className='create-post-button' onClick={toggleFormModal}>Create Post</button>
       <article className='form-modal'>
         {formModalIsOpen && <FormModal
