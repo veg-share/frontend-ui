@@ -15,10 +15,35 @@ const Feed = ({ profileIsVisible }) => {
     setAllPosts(posts)
   }, [currentUserPosts, allPosts])
 
+  const modifyDates = (posts) => {
+    const modifiedPosts = posts.map(post => {
+      return new Date(post.createdAt).toString().slice(0, 15)
+    })
+    return sortPostsByDate(modifiedPosts)
+  }
+
+  const sortPostsByDate = (posts) => {
+    return posts.sort((a, b) => {
+      if (a.post.createdAt < b.post.createdAt) {
+        return -1;
+      } else if (a.post.createdAt == b.post.createdAt) {
+        return 0;
+      } else {
+        return 1;
+      }
+    })
+  }
+
   const displayPostsInFeed = (postsToDisplay) => {
-    return postsToDisplay.map(post => {
-      return (
-        <Post
+    if (postsToDisplay.length) {
+
+      // Currently, this method should take in the posts passed in, convert their date properties, then sort them to be displayed in this method. We'd just have to assign the result of the modifyDates method to a variable name and map over those posts instead.
+
+      // modifyDates(postsToDisplay)
+
+      return postsToDisplay.map(post => {
+        return (
+          <Post
           userName={post.userName}
           title={post.title}
           date={post.date}
@@ -28,8 +53,15 @@ const Feed = ({ profileIsVisible }) => {
           imageUrl={post.image}
           key={post.id}
         />
+        )
+      })
+    } else {
+      return (
+        <section className='no-user-posts-message'>
+          <p>Looks like there are no shares here. Press the 'Create Post' button to join the party!</p>
+        </section>
       )
-    })
+    }
   }
 
   return (
