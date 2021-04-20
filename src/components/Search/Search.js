@@ -22,7 +22,7 @@ const Search = ({ determineSearchResults }) => {
     if (postsToDisplay.length) {
       determineSearchResults(postsToDisplay)
     } else {
-      determineSearchResults(null)
+      determineSearchResults(false)
     }
   }
 
