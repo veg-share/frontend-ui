@@ -16,6 +16,8 @@ const Feed = ({ profileIsVisible, searchResults }) => {
     setCurrentUserPosts(user.posts)
   }, [currentUserPosts])
 
+  console.log(searchResults)
+
   let postsToDisplay
 
   const displayPostsInFeed = (posts) => {
@@ -33,7 +35,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
       )
     })
   }
-  
+
   if (profileIsVisible) {
     displayPostsInFeed(currentUserPosts)
   } else if (searchResults.length) {

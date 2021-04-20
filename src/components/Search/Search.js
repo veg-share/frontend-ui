@@ -32,6 +32,7 @@ const Search = ({ determineSearchResults }) => {
     <form className='search' onSubmit={handleSubmit}>
       <input
         type='text'
+        value={searchInput}
         className='search-bar'
         placeholder='Search by produce name'
         onChange={handleSearch}
