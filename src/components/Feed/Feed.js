@@ -33,7 +33,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
       )
     })
   }
-
+  
   if (profileIsVisible) {
     displayPostsInFeed(currentUserPosts)
   } else if (searchResults.length) {

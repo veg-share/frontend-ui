@@ -8,6 +8,7 @@ import { user } from '../../Data/mockData';
 const ProfileView = () => {
   const [currentUser, setCurrentUser] = useState({})
   const [profileIsVisible, setProfileIsVisible] = useState(false)
+  const [searchResults, setSearchResults] = useState([])
 
   useEffect(() => {
     setCurrentUser(user)
@@ -20,7 +21,7 @@ const ProfileView = () => {
       <div className='feed-container'>
         <UserInteractions />
         <h3 className='feed-title'>Posts</h3>
-        <Feed profileIsVisible={profileIsVisible}/>
+        <Feed profileIsVisible={profileIsVisible} searchResults={searchResults} />
       </div>
     </div>
   )
