@@ -1,5 +1,4 @@
 .form__create-post {
-  /* width: 50%; */
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -17,9 +16,10 @@
 
 .form__create-post input {
   width: 350px;
+  text-align: center;
   border-radius: 0.25rem;
+  border: solid #9DBFAF 1px;
   margin: 0.5rem;
-  align-self: center;
   padding: 0.25rem;
 }
 
@@ -40,14 +40,14 @@
 }
 
 button:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   transition: all 0.4s ease 0s;
   cursor: pointer;
   border-radius: 0.35rem;
 }
 
 button:focus {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   transition: all 0.4s ease 0s;
   cursor: pointer;
   border-radius: 0.35rem;

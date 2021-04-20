@@ -8,16 +8,16 @@ import './UserDetails.css';
 
 const UserDetails = ({user}) => {
   return (
-    <div className='user-container'>
+    <div className='user-details-container'>
       <img src={profilePic} alt='user profile' className='profile-pic'/>
       <h2 className='user-name'>{user.name}</h2>
       <div className='user-details'>
         <div className='location-container'>
-          <img src={homeIcon} alt='house' className='home-img'/>
+          <img src={homeIcon} alt='house icon' className='home-img'/>
           <p className='user-location'>{user.location}</p>
         </div>
         <div className='shares-container'>
-          <img src={veggieIcon} alt='carrot' className='veggie-img'/>
+          <img src={veggieIcon} alt='carrot icon' className='veggie-img'/>
           <p className='user-shares'>Veg Shares: {user.numberOfShares}</p>
         </div>
         <p className='user-bio'>{user.bio}</p>

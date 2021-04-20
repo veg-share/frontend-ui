@@ -15,14 +15,15 @@ const ProfileView = () => {
   }, [])
 
   return (
-    <div className='profile-page'>
+    <section className='profile-page'>
       <UserDetails user={currentUser}/>
-      <div className='feed-container'>
+      <section className='feed-container'>
         <UserInteractions user={currentUser}/>
         <h3 className='feed-title'>My Posts</h3>
         <Feed profileIsVisible={profileIsVisible}/>
-      </div>
-    </div>
+      </section>
+
+    </section>
   )
 }
 
