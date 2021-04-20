@@ -1,3 +1,13 @@
+.clear-button {
+  margin-left: 0.5rem;
+  border: 1px solid #AB9C91;
+  background-color: #AB9C91;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .search {
   width: 100%;
   display: flex;
