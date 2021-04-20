@@ -1,15 +1,16 @@
-.home-img,
-.veggie-img {
-  width: 25px;
-  height: 25px;
-  margin-right: 0.5rem;
+.user-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
-.location-container,
-.shares-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.user-details {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: center;
 }
 
 .profile-pic {
@@ -19,19 +20,30 @@
   border-radius: 100%
 }
 
-.user-details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-}
-
-.user-details {
-  text-align: center;
-}
-
 .user-name {
+  font-family: 'Lobster', cursive;
+  font-weight: 300;
+  font-size: xx-large;
   text-align: center;
+  border-bottom: solid #EFEDE8 2px;
   margin-bottom: 0.75rem;
+}
+
+.user-bio {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.location-container,
+.shares-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-img,
+.veggie-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
 }
