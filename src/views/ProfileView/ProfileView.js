@@ -17,7 +17,7 @@ const ProfileView = () => {
 
   return (
     <div className='profile-page'>
-      <UserDetails user={currentUser}/>
+      <UserDetails user={currentUser} />
       <div className='feed-container'>
         <UserInteractions />
         <h3 className='feed-title'>Posts</h3>
