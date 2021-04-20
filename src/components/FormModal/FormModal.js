@@ -57,7 +57,7 @@ const FormModal = ({ user, toggleFormModal }) => {
           className="post__description-input"
           type="text"
           name="description-input"
-          placeholder="Please provide a brief description (items & amounts)..."
+          placeholder="Brief description (items & amounts)"
           value={ description } 
           aria-required="true" 
           aria-label="field to input description of post"
@@ -68,7 +68,7 @@ const FormModal = ({ user, toggleFormModal }) => {
           className="post__image"
           type="text"
           name="image-input"
-          placeholder="Please provide a url link for the image to post!"
+          placeholder="URL link for the image to post"
           value={ image } 
           aria-required="true" 
           aria-label="field to input link for image to upload"
