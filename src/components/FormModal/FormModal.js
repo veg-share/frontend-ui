@@ -3,9 +3,8 @@ import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './FormModal.css';
-// import Search from '../../components/Search/Search';
 
-const FormModal = ({ user }) => {
+const FormModal = ({ user, toggleFormModal }) => {
   const [title, setPostTitle] = useState('')
   const [description, setPostDescription] = useState('')
   const [image, setPostImageUrl] = useState('')
@@ -14,7 +13,7 @@ const FormModal = ({ user }) => {
     event.preventDefault();
     const newPost = {
       id: Date.now(),
-      date: Date.now(),
+      date: new Date().toLocaleDateString(),
       postedById: user.id,
       postedBy: user.name,
       location: user.location,
@@ -28,6 +27,7 @@ const FormModal = ({ user }) => {
     // props.addPost(newPost);
     //// create (/ & pass in) a function which will actually sent this post in a request to the BE
 
+    toggleFormModal();
     clearInputs();
   }
 
@@ -93,7 +93,7 @@ const FormModal = ({ user }) => {
           aria-label="field to input amount per item offered in lbs"
         /> */}
 
-      <button className='submit-post-button' onClick={event => submitPost(event)}>Create Post</button>
+      <button className='submit-post-button' onClick={event => submitPost(event)}>Submit Post</button>
 
       </form>
     </article>
@@ -103,6 +103,7 @@ const FormModal = ({ user }) => {
 
 FormModal.propTypes = {
   user: PropTypes.object.isRequired,
+  toggleFormModal: PropTypes.func,
 }
 
 export default FormModal;

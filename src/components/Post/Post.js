@@ -31,7 +31,7 @@ Post.propTypes = {
   location: PropTypes.object,
   description: PropTypes.string,
   distance: PropTypes.string,
-  imageUrl: PropTypes.string
+  imageUrl: PropTypes.string,
 }
 
 export default Post;

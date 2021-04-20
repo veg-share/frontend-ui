@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 
 import './HomeView.css';
 
@@ -28,10 +27,5 @@ const HomeView = () => {
     </section>
   )
 }
-
-// HomeView.propTypes = {
-//   currentUser: PropTypes.object,
-//   isHome: PropTypes.bool,
-// }
 
 export default HomeView;

@@ -26,6 +26,7 @@ const Feed = ({ profileIsVisible }) => {
           description={post.description}
           distance={post.distance}
           imageUrl={post.image}
+          key={post.id}
         />
       )
     })
@@ -39,7 +40,6 @@ const Feed = ({ profileIsVisible }) => {
 }
 
 Feed.propTypes = {
-  // user: PropTypes.object.isRequired,
   profileIsVisible: PropTypes.bool,
 }
 

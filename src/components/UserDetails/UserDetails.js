@@ -9,7 +9,7 @@ import './UserDetails.css';
 const UserDetails = ({user}) => {
   return (
     <div className='user-container'>
-      <img src={profilePic} alt='profile-picture' className='profile-pic'/>
+      <img src={profilePic} alt='user profile' className='profile-pic'/>
       <h2 className='user-name'>{user.name}</h2>
       <div className='user-details'>
         <div className='location-container'>
@@ -27,7 +27,7 @@ const UserDetails = ({user}) => {
 }
 
 UserDetails.propTypes = {
-  user: PropTypes.object
+  user: PropTypes.object,
 }
 
 export default UserDetails;

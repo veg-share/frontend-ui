@@ -20,8 +20,10 @@ const UserInteractions = ({ isHome, user }) => {
       {isHome && <Search />}
       <button className='create-post-button' onClick={toggleFormModal}>Create Post</button>
       <article className='form-modal'>
-      {formModalIsOpen && <FormModal user={user}/>}
-    </article>
+        {formModalIsOpen && <FormModal
+        user={user}
+        toggleFormModal={toggleFormModal}/>}
+      </article>
     </section>
   )
 }
