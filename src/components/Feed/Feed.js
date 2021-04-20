@@ -18,11 +18,8 @@ const Feed = ({ profileIsVisible, searchResults }) => {
 
   let postsToDisplay
 
-  const modifyDates = (posts) => {
-    const modifiedPosts = posts.map(post => {
-      return new Date(post.createdAt).toString().slice(0, 15)
-    })
-    return sortPostsByDate(modifiedPosts)
+  const modifyDate = (date) => {
+    return new Date(date).toString().slice(0, 15)
   }
 
   const sortPostsByDate = (posts) => {
@@ -42,14 +39,12 @@ const Feed = ({ profileIsVisible, searchResults }) => {
 
       // Currently, this method should take in the posts passed in, convert their date properties, then sort them to be displayed in this method. We'd just have to assign the result of the modifyDates method to a variable name and map over those posts instead.
 
-      // modifyDates(postsToDisplay)
-
       return postsToDisplay = posts.map(post => {
         return (
           <Post
           userName={post.userName}
           title={post.title}
-          date={post.date}
+          date={modifyDate(post.createdAt)}
           location={post.location}
           description={post.description}
           distance={post.distance}
