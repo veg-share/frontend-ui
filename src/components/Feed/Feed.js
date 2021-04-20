@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './Feed.css';
 import Post from '../../components/Post/Post';
-import { user, posts } from '../../Data/mockData';
+import { user } from '../../Data/mockData';
+import AppContext from '../../Context/AppContext';
 
-const Feed = ({ profileIsVisible }) => {
+
+const Feed = ({ profileIsVisible, searchResults }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
-  const [allPosts, setAllPosts] = useState([])
+  const allPosts = useContext(AppContext)
 
   useEffect(() => {
     setCurrentUserPosts(user.posts)
-    setAllPosts(posts)
-  }, [currentUserPosts, allPosts])
+  }, [currentUserPosts])
+
+  let postsToDisplay
 
   const modifyDates = (posts) => {
     const modifiedPosts = posts.map(post => {
@@ -34,14 +37,14 @@ const Feed = ({ profileIsVisible }) => {
     })
   }
 
-  const displayPostsInFeed = (postsToDisplay) => {
-    if (postsToDisplay.length) {
+  const displayPostsInFeed = (posts) => {
+    if (posts.length) {
 
       // Currently, this method should take in the posts passed in, convert their date properties, then sort them to be displayed in this method. We'd just have to assign the result of the modifyDates method to a variable name and map over those posts instead.
 
       // modifyDates(postsToDisplay)
 
-      return postsToDisplay.map(post => {
+      return postsToDisplay = posts.map(post => {
         return (
           <Post
             userName={post.userName}
@@ -55,17 +58,28 @@ const Feed = ({ profileIsVisible }) => {
         )
       })
     } else {
-      return (
-        <section className='no-user-posts-message'>
-          <p>Looks like there are no shares here. Press the 'Create Post' button to join the party!</p>
-        </section>
-      )
+      return displayNoPostsMessage()
     }
+  }
+
+  const displayNoPostsMessage = () => {
+      postsToDisplay = 
+        <section className='no-user-posts-message'>
+          <p>Looks like there's nothing here. Press the 'Create Post' button to join the party!</p>
+        </section>
+  }
+
+  if (profileIsVisible) {
+    displayPostsInFeed(currentUserPosts)
+  } else if (searchResults.length || !searchResults) {
+    displayPostsInFeed(searchResults)
+  } else if (!profileIsVisible && !searchResults.length) {
+    displayPostsInFeed(allPosts)
   }
 
   return (
     <div className='post-container'>
-      {profileIsVisible ? displayPostsInFeed(currentUserPosts) : displayPostsInFeed(allPosts)}
+      {postsToDisplay}
     </div>
   )
 }
