@@ -16,8 +16,8 @@ const Search = ({ determineSearchResults }) => {
   }
 
   const filterPosts = () => {
-    const postsToDisplay = allPosts.filter(post => {
-      return post.title.includes(searchInput) || post.description.includes(searchInput)
+    const postsToDisplay = allPosts.getAllPosts.filter(post => {
+      return post.title.toLowerCase().includes(searchInput) || post.description.toLowerCase().includes(searchInput)
     })
     if (postsToDisplay.length) {
       determineSearchResults(postsToDisplay)
