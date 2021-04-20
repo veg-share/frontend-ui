@@ -47,14 +47,15 @@ const Feed = ({ profileIsVisible, searchResults }) => {
       return postsToDisplay = posts.map(post => {
         return (
           <Post
-            userName={post.userName}
-            title={post.title}
-            date={post.date}
-            location={post.location}
-            description={post.description}
-            distance={post.distance}
-            imageUrl={post.image}
-          />
+          userName={post.userName}
+          title={post.title}
+          date={post.date}
+          location={post.location}
+          description={post.description}
+          distance={post.distance}
+          imageUrl={post.image}
+          key={post.id}
+        />
         )
       })
     } else {
@@ -82,6 +83,10 @@ const Feed = ({ profileIsVisible, searchResults }) => {
       {postsToDisplay}
     </div>
   )
+}
+
+Feed.propTypes = {
+  profileIsVisible: PropTypes.bool,
 }
 
 export default Feed;

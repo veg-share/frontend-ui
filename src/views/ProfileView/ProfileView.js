@@ -19,8 +19,8 @@ const ProfileView = () => {
     <div className='profile-page'>
       <UserDetails user={currentUser} />
       <div className='feed-container'>
-        <UserInteractions />
-        <h3 className='feed-title'>Posts</h3>
+        <UserInteractions user={currentUser}/>
+        <h3 className='feed-title'>My Posts</h3>
         <Feed profileIsVisible={profileIsVisible} searchResults={searchResults} />
       </div>
     </div>
