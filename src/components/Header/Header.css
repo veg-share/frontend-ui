@@ -5,24 +5,35 @@
   align-items: center;
   background-color: #3C573C;
   color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem; 
 }
 
 .veg-share-title {
+  font-family: 'Lobster', cursive;
+  font-weight: 300;
+  font-size: xx-large;
   margin-left: 3%;
 }
 
 .profile-link,
 .home-link {
-  color: #000000;
+  color: white;
   text-decoration: none;
+  padding: .25rem;
 }
 
 .link-button {
-  height: 100%;
-  width: 90%;
-  background-color: #D0DCB2;
-  margin-right: 5%;
-  border-radius: 6px;
+  height: auto;
+  width: auto;
+  background-color: #99AE92;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .header-line {
