@@ -1,17 +1,21 @@
 .search {
-  display: flex;
   width: 100%;
+  display: flex;
   margin-bottom: 0.5rem;
 }
 
 .search-bar {
   width: 100%;
-  border: 3px solid #AB9C91;
-  border-right: none;
-  padding: 5px;
   height: 20px;
+  border: 3px solid #AB9C91;
   border-radius: 5px 0 0 5px;
+  border-right: none;
   color: #9DBFAF;
+  padding: 5px;
+}
+
+.search-bar:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .search-button {

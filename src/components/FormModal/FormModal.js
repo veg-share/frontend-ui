@@ -46,7 +46,7 @@ const FormModal = ({ user, toggleFormModal }) => {
           className="post__title-input"
           type="text"
           name="title-input"
-          placeholder="Title"
+          placeholder="Title of post"
           value={ title } 
           aria-required="true" 
           aria-label="field to input title of post"
@@ -57,7 +57,7 @@ const FormModal = ({ user, toggleFormModal }) => {
           className="post__description-input"
           type="text"
           name="description-input"
-          placeholder="Please provide a brief description"
+          placeholder="Please provide a brief description (items & amounts)..."
           value={ description } 
           aria-required="true" 
           aria-label="field to input description of post"
