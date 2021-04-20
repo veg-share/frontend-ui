@@ -1,23 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import HomeView from '../views/HomeView/HomeView';
 import ProfileView from '../views/ProfileView/ProfileView';
 import AppContext from '../Context/AppContext';
-import { posts } from '../Data/mockData';
+import { useQuery, gql } from '@apollo/client';
 
 import './App.css';
 
-const App = () => {
-  const [allPosts, setAllPosts] = useState([])
+const GET_ALL_POSTS = gql`
+      query {
+        getAllPosts {
+          id
+          userId
+          title
+          description
+          createdAt
+          tags
+        }
+      }
+    `
 
-  useEffect(() => {
-    setAllPosts(posts)
-  }, [allPosts])
+const App = () => {
+  const { loading, error, data } = useQuery(GET_ALL_POSTS)
+
+  if (loading) return <p>Loading...</p>
+  if (data) console.log(data)
+  if (error) return <p>Error :(</p>
 
   return (
-     <AppContext.Provider value={allPosts}>
+     <AppContext.Provider value={data}>
         <section className='main'>
           <Header />
           <Route exact path='/' component={HomeView} />

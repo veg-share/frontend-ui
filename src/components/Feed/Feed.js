@@ -64,7 +64,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   }
 
   const displayNoPostsMessage = () => {
-      postsToDisplay = 
+      postsToDisplay =
         <section className='no-user-posts-message'>
           <p>Looks like there's nothing here. Press the 'Create Post' button to join the party!</p>
         </section>
@@ -75,7 +75,9 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   } else if (searchResults.length || !searchResults) {
     displayPostsInFeed(searchResults)
   } else if (!profileIsVisible && !searchResults.length) {
-    displayPostsInFeed(allPosts)
+    console.log('hi')
+    console.log('all posts', allPosts.getAllPosts)
+    displayPostsInFeed(allPosts.getAllPosts)
   }
 
   return (

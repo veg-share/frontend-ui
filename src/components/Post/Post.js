@@ -5,20 +5,20 @@ import PropTypes from 'prop-types';
 import profilePic from '../../Images/user.png';
 import './Post.css';
 
-const Post = ({ userName, title, date, location, description, distance, imageUrl }) => {
+const Post = ({ title, date, description }) => {
   return (
     <div className='single-post'>
       <div className='post-header'>
         <img src={profilePic} alt='small-profile' className='small-profile-pic'/>
         <div className='post-top'>
-          <p className='post-name'>{userName}</p>
+          {/*<p className='post-name'>{userName}</p>*/}
           <p className='post-date'>{date}</p>
         </div>
       </div>
       <div className='post-body'>
         <p className='post-title'>{title}</p>
         <p className='post-description'>{description}</p>
-        <img src={imageUrl} alt={title} className='post-image'/>
+        {/*<img src={imageUrl} alt={title} className='post-image'/>*/}
       </div>
     </div>
   )

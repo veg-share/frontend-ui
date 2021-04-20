@@ -5,6 +5,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { gql } from '@apollo/client';
 import App from './App/App';
+import { ApolloProvider } from '@apollo/client/react';
 
 import './index.css';
 
@@ -13,27 +14,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-client
-  .query({
-    query: gql`
-      query {
-        getAllPosts {
-          id
-          userId
-          title
-          description
-          createdAt
-          tags
-        }
-      }
-    `
-  })
-  .then(result => console.log(result));
-
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <ApolloProvider client={client}>
+    <Router>
+      <App />
+    </Router>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
