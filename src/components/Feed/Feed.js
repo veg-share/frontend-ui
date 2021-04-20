@@ -16,8 +16,6 @@ const Feed = ({ profileIsVisible, searchResults }) => {
     setCurrentUserPosts(user.posts)
   }, [currentUserPosts])
 
-  console.log(searchResults)
-
   let postsToDisplay
 
   const displayPostsInFeed = (posts) => {
