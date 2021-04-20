@@ -5,24 +5,39 @@
   align-items: center;
   background-color: #3C573C;
   color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem; 
 }
 
 .veg-share-title {
+  font-family: 'Lobster', cursive;
+  font-weight: 300;
+  font-size: xx-large;
   margin-left: 3%;
 }
 
 .profile-link,
 .home-link {
-  color: #000000;
+  color: white;
   text-decoration: none;
+  padding: 0.5rem;
 }
 
 .link-button {
-  height: 100%;
-  width: 90%;
-  background-color: #D0DCB2;
-  margin-right: 5%;
-  border-radius: 6px;
+  height: auto;
+  width: auto;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border: none;
+  padding: .25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  border-radius: 8px;
+  background: #3C573C;
+  box-shadow: inset 5px -5px 10px #334a33,
+              inset -5px 5px 10px #456445;
 }
 
 .header-line {
