@@ -20,20 +20,24 @@
 .home-link {
   color: white;
   text-decoration: none;
-  padding: .25rem;
+  padding: 0.5rem;
 }
 
 .link-button {
   height: auto;
   width: auto;
-  background-color: #99AE92;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   border: none;
-  border-radius: 0.5rem;
+  padding: .25rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+
+  border-radius: 8px;
+  background: #3C573C;
+  box-shadow: inset 5px -5px 10px #334a33,
+              inset -5px 5px 10px #456445;
 }
 
 .header-line {

@@ -1,4 +1,6 @@
 .form__create-post {
+  width: auto;
+  height: 150px;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -7,9 +9,6 @@
 
   background-color: white;
   border-radius: 1rem;
-  color: #2c3e50;
-  height: 150px;
-  width: auto;
   margin: 1.5rem 0rem 0.5rem 0rem;
   padding: 2rem;
 }
@@ -30,13 +29,16 @@
 .submit-post-button {
   width: 66%;
   padding: 0.5rem;
-  background-color: #99AE92;
   color: white;
   border: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+
+  border-radius: 10px;
+  background: #62765b;
+  box-shadow: inset -5px -5px 8px #586a52,
+              inset 5px 5px 8px #6c8264;
 }
 
 button:hover {
