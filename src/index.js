@@ -16,8 +16,15 @@ const client = new ApolloClient({
 client
   .query({
     query: gql`
-      query getAllUsers {
-        username
+      query {
+        getAllPosts {
+          id
+          userId
+          title
+          description
+          createdAt
+          tags
+        }
       }
     `
   })
