@@ -1,3 +1,7 @@
+.form-modal {
+  width: 100%;
+}
+
 .form__create-post {
   width: auto;
   height: 150px;
@@ -14,7 +18,7 @@
 }
 
 .form__create-post input {
-  width: 350px;
+  width: 100%;
   text-align: center;
   border-radius: 0.25rem;
   border: solid #9DBFAF 1px;

@@ -39,7 +39,7 @@ const FormModal = ({ user, toggleFormModal }) => {
 
   return (
 
-    <article className="form-modal">
+    // <article className="form-modal">
       <form className="form__create-post">
 
         <input
@@ -96,7 +96,7 @@ const FormModal = ({ user, toggleFormModal }) => {
       <button className='submit-post-button' onClick={event => submitPost(event)}>Submit Post</button>
 
       </form>
-    </article>
+    // </article>
 
   )
 }
