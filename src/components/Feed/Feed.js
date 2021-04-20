@@ -57,22 +57,29 @@ const Feed = ({ profileIsVisible, searchResults }) => {
           />
         )
       })
-    } else {
-      console.log('oopppsiieee')
+    }
+  }
+
+  const displayNoPostsMessage = () => {
+    console.log('oopppsiieee')
       return (
         <section className='no-user-posts-message'>
           <p>Looks like there are no shares here. Press the 'Create Post' button to join the party!</p>
         </section>
       )
-    }
   }
 
   if (profileIsVisible) {
+    console.log('profile')
     displayPostsInFeed(currentUserPosts)
+  } else if (!profileIsVisible && !searchResults.length) {
+    console.log('home')
+    displayPostsInFeed(allPosts)
   } else if (searchResults.length) {
+    console.log('search')
     displayPostsInFeed(searchResults)
   } else {
-    displayPostsInFeed(allPosts)
+    displayNoPostsMessage()
   }
 
   return (

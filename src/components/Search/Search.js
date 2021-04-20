@@ -19,7 +19,11 @@ const Search = ({ determineSearchResults }) => {
     const postsToDisplay = allPosts.filter(post => {
       return post.title.includes(searchInput) || post.description.includes(searchInput)
     })
-    determineSearchResults(postsToDisplay)
+    if (postsToDisplay.length) {
+      determineSearchResults(postsToDisplay)
+    } else {
+      determineSearchResults(null)
+    }
   }
 
   const clearSearch = (event) => {
