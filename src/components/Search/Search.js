@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// import PropTypes from 'prop-types';
+
 import './Search.css';
 
 const Search = () => {
@@ -39,5 +41,9 @@ const Search = () => {
     </form>
   )
 }
+
+// Search.propTypes = {
+
+// }
 
 export default Search;

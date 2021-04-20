@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import './HomeView.css';
 
@@ -10,8 +10,6 @@ import { user } from '../../Data/mockData';
 const HomeView = () => {
   const [currentUser, setCurrentUser] = useState({})
   const [isHome, setIsHome] = useState(false)
-
-
 
   useEffect(() => {
     setCurrentUser(user)
@@ -30,5 +28,10 @@ const HomeView = () => {
     </section>
   )
 }
+
+// HomeView.propTypes = {
+//   currentUser: PropTypes.object,
+//   isHome: PropTypes.bool,
+// }
 
 export default HomeView;

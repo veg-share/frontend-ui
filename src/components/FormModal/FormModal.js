@@ -8,12 +8,13 @@ import './FormModal.css';
 const FormModal = ({ user }) => {
   const [title, setPostTitle] = useState('')
   const [description, setPostDescription] = useState('')
-  const [image, setPostImgUrl] = useState('')
+  const [image, setPostImageUrl] = useState('')
 
   const submitPost = event => {
     event.preventDefault();
     const newPost = {
       id: Date.now(),
+      date: Date.now(),
       postedById: user.id,
       postedBy: user.name,
       location: user.location,
@@ -33,7 +34,7 @@ const FormModal = ({ user }) => {
   const clearInputs = () => {
     setPostTitle('')
     setPostDescription('')
-    setPostImgUrl('')
+    setPostImageUrl('')
   }
 
   return (
@@ -71,7 +72,7 @@ const FormModal = ({ user }) => {
           value={ image } 
           aria-required="true" 
           aria-label="field to input link for image to upload"
-          onChange={event => setPostImgUrl(event.target.value)}
+          onChange={event => setPostImageUrl(event.target.value)}
         />
 {/* 
         <input
@@ -98,6 +99,10 @@ const FormModal = ({ user }) => {
     </article>
 
   )
+}
+
+FormModal.propTypes = {
+  user: PropTypes.object.isRequired,
 }
 
 export default FormModal;

@@ -38,4 +38,9 @@ const Feed = ({ profileIsVisible }) => {
   )
 }
 
+Feed.propTypes = {
+  // user: PropTypes.object.isRequired,
+  profileIsVisible: PropTypes.bool,
+}
+
 export default Feed;

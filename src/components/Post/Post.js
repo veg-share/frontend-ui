@@ -24,4 +24,14 @@ const Post = ({ userName, title, date, location, description, distance, imageUrl
   )
 }
 
+Post.propTypes = {
+  userName: PropTypes.string,
+  title: PropTypes.string,
+  date: PropTypes.string,
+  location: PropTypes.object,
+  description: PropTypes.string,
+  distance: PropTypes.string,
+  imageUrl: PropTypes.string
+}
+
 export default Post;

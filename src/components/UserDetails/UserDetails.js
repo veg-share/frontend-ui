@@ -1,8 +1,10 @@
 import React from 'react';
-import './UserDetails.css';
+import PropTypes from 'prop-types';
+
 import profilePic from '../../Images/user.png';
 import homeIcon from '../../Images/home.png';
 import veggieIcon from '../../Images/carrot.png';
+import './UserDetails.css';
 
 const UserDetails = ({user}) => {
   return (
@@ -22,6 +24,10 @@ const UserDetails = ({user}) => {
       </div>
     </div>
   )
+}
+
+UserDetails.propTypes = {
+  user: PropTypes.object
 }
 
 export default UserDetails;
