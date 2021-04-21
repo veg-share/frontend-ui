@@ -4,7 +4,7 @@ import AppContext from '../../Context/AppContext';
 
 const Search = ({ determineSearchResults }) => {
   const [searchInput, setSearchInput] = useState('')
-  const allPosts = useContext(AppContext)
+  const allData = useContext(AppContext)
 
   const handleSearch = (event) => {
     setSearchInput(event.target.value)
@@ -16,8 +16,8 @@ const Search = ({ determineSearchResults }) => {
   }
 
   const filterPosts = () => {
-    const postsToDisplay = allPosts.filter(post => {
-      return post.title.includes(searchInput) || post.description.includes(searchInput)
+    const postsToDisplay = allData[0].getAllPosts.filter(post => {
+      return post.title.toLowerCase().includes(searchInput) || post.description.toLowerCase().includes(searchInput)
     })
     if (postsToDisplay.length) {
       determineSearchResults(postsToDisplay)
