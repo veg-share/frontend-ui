@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './FormModal.css';
@@ -44,8 +43,8 @@ const FormModal = ({ user, toggleFormModal }) => {
           type="text"
           name="title-input"
           placeholder="Title of post"
-          value={ title } 
-          aria-required="true" 
+          value={ title }
+          aria-required="true"
           aria-label="field to input title of post"
           onChange={event => setPostTitle(event.target.value)}
         />
@@ -54,8 +53,8 @@ const FormModal = ({ user, toggleFormModal }) => {
           type="text"
           name="description-input"
           placeholder="Brief description (items & amounts)"
-          value={ description } 
-          aria-required="true" 
+          value={ description }
+          aria-required="true"
           aria-label="field to input description of post"
           onChange={event => setPostDescription(event.target.value)}
         />
@@ -64,12 +63,12 @@ const FormModal = ({ user, toggleFormModal }) => {
           type="text"
           name="image-input"
           placeholder="URL link for the image to post"
-          value={ image } 
-          aria-required="true" 
+          value={ image }
+          aria-required="true"
           aria-label="field to input link for image to upload"
           onChange={event => setPostImageUrl(event.target.value)}
         />
-      {/* 
+      {/*
         <input
           className="post__quantity-input"
           type="text"

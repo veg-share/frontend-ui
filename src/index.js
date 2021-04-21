@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { gql } from '@apollo/client';
 import App from './App/App';
 import { ApolloProvider } from '@apollo/client/react';
 
