@@ -53,8 +53,9 @@ const App = () => {
     { loading: loading2, error: error2, data: data2 }
   ] = QueryMultiple()
 
-  if (loading1 || loading2) return <p>Loading...</p>
-  if (error1 || error2) return <p>Error :(</p>
+  if (loading1 || loading2) return <div className='container'><p className='loading'>Loading...</p></div>
+  if (error1) return <p className='error'>Error: ${error1.message}</p>
+  if (error2) return <p className='error'>Error: ${error2.message}</p>
 
   return (
      <AppContext.Provider value={[data1, data2]}>
