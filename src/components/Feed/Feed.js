@@ -10,7 +10,7 @@ import AppContext from '../../Context/AppContext';
 
 const Feed = ({ profileIsVisible, searchResults }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
-  const allPosts = useContext(AppContext)
+  const allData = useContext(AppContext)
 
   useEffect(() => {
     setCurrentUserPosts(user.posts)
@@ -71,8 +71,8 @@ const Feed = ({ profileIsVisible, searchResults }) => {
     displayPostsInFeed(searchResults)
   } else if (!profileIsVisible && !searchResults.length) {
     console.log('hi')
-    console.log('all posts', allPosts.getAllPosts)
-    displayPostsInFeed(allPosts.getAllPosts)
+    console.log('all posts', allData[0].getAllPosts)
+    displayPostsInFeed(allData[0].getAllPosts)
   }
 
   return (
