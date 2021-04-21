@@ -38,10 +38,7 @@ const FormModal = ({ user, toggleFormModal }) => {
   }
 
   return (
-
-    <article className="form-modal">
       <form className="form__create-post">
-
         <input
           className="post__title-input"
           type="text"
@@ -52,29 +49,27 @@ const FormModal = ({ user, toggleFormModal }) => {
           aria-label="field to input title of post"
           onChange={event => setPostTitle(event.target.value)}
         />
-
         <input
           className="post__description-input"
           type="text"
           name="description-input"
-          placeholder="Please provide a brief description (items & amounts)..."
+          placeholder="Brief description (items & amounts)"
           value={ description } 
           aria-required="true" 
           aria-label="field to input description of post"
           onChange={event => setPostDescription(event.target.value)}
         />
-
         <input
           className="post__image"
           type="text"
           name="image-input"
-          placeholder="Please provide a url link for the image to post!"
+          placeholder="URL link for the image to post"
           value={ image } 
           aria-required="true" 
           aria-label="field to input link for image to upload"
           onChange={event => setPostImageUrl(event.target.value)}
         />
-{/* 
+      {/* 
         <input
           className="post__quantity-input"
           type="text"
@@ -92,12 +87,8 @@ const FormModal = ({ user, toggleFormModal }) => {
           value={ weight }
           aria-label="field to input amount per item offered in lbs"
         /> */}
-
       <button className='submit-post-button' onClick={event => submitPost(event)}>Submit Post</button>
-
       </form>
-    </article>
-
   )
 }
 
