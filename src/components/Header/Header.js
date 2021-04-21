@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import veggieIcon from '../../Images/carrot2.png';
 
 import './Header.css';
 
@@ -14,7 +15,9 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <h1 className='veg-share-title'>Garden Party</h1>
+      <h1 className='veg-share-title'>Garden Party 
+        <img src={veggieIcon} alt='carrot icon' className='veggie-img'/>
+      </h1>
       <div className='header-links'>
         <button className='link-button'>
           <Link className='home-link hidden' to='/' onClick={() => toggleLink()}>Home</Link>
