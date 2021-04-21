@@ -22,15 +22,37 @@ const GET_ALL_POSTS = gql`
       }
     `
 
-const App = () => {
-  const { loading, error, data } = useQuery(GET_ALL_POSTS)
+const GET_ALL_USERS = gql`
+    query {
+      getAllUsers {
+        id
+        username
+        city
+        state
+      }
+    }
+  `
 
-  if (loading) return <p>Loading...</p>
-  if (data) console.log(data)
-  if (error) return <p>Error :(</p>
+const App = () => {
+
+  const QueryMultiple = () => {
+    const response1 = useQuery(GET_ALL_POSTS)
+    const response2 = useQuery(GET_ALL_USERS)
+    return [response1, response2]
+  }
+
+  const [
+    { loading: loading1, error: error1, data: data1 },
+    { loading: loading2, error: error2, data: data2 }
+  ] = QueryMultiple()
+
+  if (loading1 || loading2) return <p>Loading...</p>
+  if (data1) console.log('data 1', data1)
+  if (data2) console.log('data 2', data2)
+  if (error1 || error2) return <p>Error :(</p>
 
   return (
-     <AppContext.Provider value={data}>
+     <AppContext.Provider value={[data1, data2]}>
         <section className='main'>
           <Header />
           <Route exact path='/' component={HomeView} />
