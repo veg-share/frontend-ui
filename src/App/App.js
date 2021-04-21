@@ -29,6 +29,10 @@ const GET_ALL_USERS = gql`
         username
         city
         state
+        posts {
+          title
+          description
+        }
       }
     }
   `
