@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './Feed.css';
@@ -36,9 +35,6 @@ const Feed = ({ profileIsVisible, searchResults }) => {
 
   const displayPostsInFeed = (posts) => {
     if (posts.length) {
-
-      // Currently, this method should take in the posts passed in, convert their date properties, then sort them to be displayed in this method. We'd just have to assign the result of the modifyDates method to a variable name and map over those posts instead.
-
       return postsToDisplay = posts.map(post => {
         return (
           <Post
@@ -70,8 +66,6 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   } else if (searchResults.length || !searchResults) {
     displayPostsInFeed(searchResults)
   } else if (!profileIsVisible && !searchResults.length) {
-    console.log('hi')
-    console.log('all posts', allData[0].getAllPosts)
     displayPostsInFeed(allData[0].getAllPosts)
   }
 
