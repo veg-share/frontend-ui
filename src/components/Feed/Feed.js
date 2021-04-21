@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './Feed.css';
@@ -10,7 +9,7 @@ import AppContext from '../../Context/AppContext';
 
 const Feed = ({ profileIsVisible, searchResults }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
-  const allPosts = useContext(AppContext)
+  const allData = useContext(AppContext)
 
   useEffect(() => {
     setCurrentUserPosts(user.posts)
@@ -18,11 +17,8 @@ const Feed = ({ profileIsVisible, searchResults }) => {
 
   let postsToDisplay
 
-  const modifyDates = (posts) => {
-    const modifiedPosts = posts.map(post => {
-      return new Date(post.createdAt).toString().slice(0, 15)
-    })
-    return sortPostsByDate(modifiedPosts)
+  const modifyDate = (date) => {
+    return new Date(date).toString().slice(0, 15)
   }
 
   const sortPostsByDate = (posts) => {
@@ -39,17 +35,12 @@ const Feed = ({ profileIsVisible, searchResults }) => {
 
   const displayPostsInFeed = (posts) => {
     if (posts.length) {
-
-      // Currently, this method should take in the posts passed in, convert their date properties, then sort them to be displayed in this method. We'd just have to assign the result of the modifyDates method to a variable name and map over those posts instead.
-
-      // modifyDates(postsToDisplay)
-
       return postsToDisplay = posts.map(post => {
         return (
           <Post
-          userName={post.userName}
+          username={post.user.username}
           title={post.title}
-          date={post.date}
+          date={modifyDate(post.createdAt)}
           location={post.location}
           description={post.description}
           distance={post.distance}
@@ -64,7 +55,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   }
 
   const displayNoPostsMessage = () => {
-      postsToDisplay = 
+      postsToDisplay =
         <section className='no-user-posts-message'>
           <p>Looks like there's nothing here. Press the 'Create Post' button to join the party!</p>
         </section>
@@ -75,7 +66,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   } else if (searchResults.length || !searchResults) {
     displayPostsInFeed(searchResults)
   } else if (!profileIsVisible && !searchResults.length) {
-    displayPostsInFeed(allPosts)
+    displayPostsInFeed(allData[0].getAllPosts)
   }
 
   return (

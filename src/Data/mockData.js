@@ -1,7 +1,7 @@
 export const posts = [
   {
     userID: 2,
-    userName: 'Betsy',
+    username: 'Betsy',
     title: 'Too many carrots!',
     date: 'June 12, 2020',
     description: '9 carrots, all are good condition.',
@@ -11,7 +11,7 @@ export const posts = [
   },
   {
     userID: 1,
-    userName: 'Jimmathy',
+    username: 'Jimmathy',
     title: 'Too many pototoes!',
     date: 'April 10, 2021',
     description: '33 potatoes, most are good condition.',
@@ -21,7 +21,7 @@ export const posts = [
   },
   {
     userID: 3,
-    userName: 'Jetski',
+    username: 'Jetski',
     title: 'Too much basil!',
     date: 'February 12, 2021',
     description: '2 lb of basil, all in good condition.',
@@ -31,7 +31,7 @@ export const posts = [
   },
   {
     userID: 2,
-    userName: 'Betsy',
+    username: 'Betsy',
     title: 'Too many onions!',
     date: 'March 17, 2021',
     description: '4 onions, all are good condition.',
@@ -50,7 +50,9 @@ export const user = {
   posts: [
     {
       userID: 2,
-      userName: 'Duckie',
+      user: {
+        username: 'Duckie'
+      },
       title: 'Too many onions!',
       date: 'June 20, 2020',
       description: '4 onions, all are good condition.',
@@ -60,7 +62,9 @@ export const user = {
     },
     {
       userID: 2,
-      userName: 'Duckie',
+      user: {
+        username: 'Duckie'
+      },
       title: 'Too many carrots!',
       date: 'August 5, 2020',
       description: '9 carrots, all are good condition.',
