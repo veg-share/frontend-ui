@@ -6,6 +6,7 @@ import HomeView from '../views/HomeView/HomeView';
 import ProfileView from '../views/ProfileView/ProfileView';
 import AppContext from '../Context/AppContext';
 import { useQuery, gql } from '@apollo/client';
+import loading from '../Images/loading.png';
 
 import './App.css';
 
@@ -53,10 +54,9 @@ const App = () => {
     { loading: loading2, error: error2, data: data2 }
   ] = QueryMultiple()
 
-  if (loading1 || loading2) return <p>Loading...</p>
-  if (data1) console.log('data 1', data1)
-  if (data2) console.log('data 2', data2)
-  if (error1 || error2) return <p>Error :(</p>
+  if (loading1 || loading2) return <div className='container'><div className='loading'><p>Loading</p><img src={loading} alt='loading' className='loading-img'/></div></div>
+  if (error1) return <div className='container'><p className='error'>Oops,something went wrong. Error: ${error1.message}</p></div>
+  if (error2) return <div className='container'><p className='error'>Oops,something went wrong. Error: ${error2.message}</p></div>
 
   return (
      <AppContext.Provider value={[data1, data2]}>
