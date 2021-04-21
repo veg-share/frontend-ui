@@ -1,5 +1,6 @@
 .post-body {
   width: 100%;
+  text-align: center;
 }
 
 .post-date {
@@ -15,14 +16,15 @@
   width: 100%;
 }
 
+.post-name,
+.post-date {
+  margin: 0.2rem 0 0 0.5rem;
+}
+
 .post-name {
   font-size: 0.95rem;
   font-weight: bold;
-}
-
-.post-name,
-.post-date {
-  margin: 0.25rem 0 0 0.5rem;
+  margin-top: 0;
 }
 
 .post-title {
