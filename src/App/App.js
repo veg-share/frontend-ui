@@ -18,6 +18,9 @@ const GET_ALL_POSTS = gql`
           description
           createdAt
           tags
+          user {
+            username
+          }
         }
       }
     `

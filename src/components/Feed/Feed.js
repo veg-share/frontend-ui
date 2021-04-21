@@ -38,7 +38,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
       return postsToDisplay = posts.map(post => {
         return (
           <Post
-          userName={post.userName}
+          username={post.user.username}
           title={post.title}
           date={modifyDate(post.createdAt)}
           location={post.location}
