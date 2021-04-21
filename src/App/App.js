@@ -54,8 +54,6 @@ const App = () => {
   ] = QueryMultiple()
 
   if (loading1 || loading2) return <p>Loading...</p>
-  if (data1) console.log('data 1', data1)
-  if (data2) console.log('data 2', data2)
   if (error1 || error2) return <p>Error :(</p>
 
   return (
