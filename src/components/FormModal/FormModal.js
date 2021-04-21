@@ -53,8 +53,8 @@ const FormModal = ({ user, toggleFormModal }) => {
           type="text"
           name="description-input"
           placeholder="Brief description (items & amounts)"
-          value={ description }
-          aria-required="true"
+          value={ description } 
+          aria-required="true" 
           aria-label="field to input description of post"
           onChange={event => setPostDescription(event.target.value)}
         />
@@ -69,6 +69,12 @@ const FormModal = ({ user, toggleFormModal }) => {
           onChange={event => setPostImageUrl(event.target.value)}
         />
       {/*
+          value={ image } 
+          aria-required="true" 
+          aria-label="field to input link for image to upload"
+          onChange={event => setPostImageUrl(event.target.value)}
+        />
+      {/* 
         <input
           className="post__quantity-input"
           type="text"
