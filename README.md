@@ -12,7 +12,7 @@ View the deployed app [here](https://gardenparty.vercel.app/).
 
 ## Set-Up Instructions
 1. Clone the repository
-```git@github.com:christina-cook/rancid-tomatillos.git```
+```git@github.com:veg-share/frontend-ui.git```
 
 2. Install dependencies
 ```npm install```
