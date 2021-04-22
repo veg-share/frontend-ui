@@ -2,6 +2,7 @@ import React from 'react';
 
 import liLogo from '../../Images/LI-In-Bug.png';
 import ghLogo from '../../Images/GitHub-Mark-Light-64px.png';
+
 import './Footer.css';
 
 const Footer = () => {

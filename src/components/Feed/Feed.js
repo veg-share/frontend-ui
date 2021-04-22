@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
+import AppContext from '../../Context/AppContext';
 import PropTypes from 'prop-types';
 
-import './Feed.css';
 import Post from '../../components/Post/Post';
-import { user } from '../../Data/mockData';
-import AppContext from '../../Context/AppContext';
+import './Feed.css';
 
+import { user } from '../../Data/mockData';
 
 const Feed = ({ profileIsVisible, searchResults }) => {
   const [currentUserPosts, setCurrentUserPosts] = useState([])
@@ -70,14 +70,15 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   }
 
   return (
-    <div className='post-container'>
+    <section className='post-container'>
       {postsToDisplay}
-    </div>
+    </section>
   )
 }
 
 Feed.propTypes = {
   profileIsVisible: PropTypes.bool,
+  searchResults: PropTypes.array,
 }
 
 export default Feed;

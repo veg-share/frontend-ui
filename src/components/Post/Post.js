@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import profilePic from '../../Images/user.png';
+
 import './Post.css';
 
 const Post = ({ title, date, description, username }) => {
   return (
-    <div className='single-post'>
+    <section className='single-post'>
       <div className='post-header'>
         <img src={profilePic} alt='small-profile' className='small-profile-pic'/>
         <div className='post-top'>
@@ -19,15 +20,16 @@ const Post = ({ title, date, description, username }) => {
         <p className='post-description'>{description}</p>
         {/*<img src={imageUrl} alt={title} className='post-image'/>*/}
       </div>
-    </div>
+    </section>
   )
 }
 
 Post.propTypes = {
-  userName: PropTypes.string,
+  username: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
-  location: PropTypes.object,
+  // location: PropTypes.object,
+  location: PropTypes.string,
   description: PropTypes.string,
   distance: PropTypes.string,
   imageUrl: PropTypes.string,
