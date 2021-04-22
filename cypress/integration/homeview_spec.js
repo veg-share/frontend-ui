@@ -37,4 +37,14 @@ describe('VegShare, main page view', () => {
       .find('.link-button .home-link').should('have.class', 'hidden')
   });
 
+  it ('Should display all posts on the home page by default',  () => {
+    cy
+      .get('.home-view').should('be.visible')
+      .find('.feed-container .feed-title').should('contain', 'All Posts')
+
+      .get('.home-view .feed-container')
+      .get('.post-container')
+      .find('.single-post').should('have.length', 350)
+  });
+
 })

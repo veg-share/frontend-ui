@@ -7,7 +7,7 @@ import './Post.css';
 
 const Post = ({ title, date, description, username }) => {
   return (
-    <div className='single-post'>
+    <section className='single-post'>
       <div className='post-header'>
         <img src={profilePic} alt='small-profile' className='small-profile-pic'/>
         <div className='post-top'>
@@ -20,7 +20,7 @@ const Post = ({ title, date, description, username }) => {
         <p className='post-description'>{description}</p>
         {/*<img src={imageUrl} alt={title} className='post-image'/>*/}
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -70,9 +70,9 @@ const Feed = ({ profileIsVisible, searchResults }) => {
   }
 
   return (
-    <div className='post-container'>
+    <section className='post-container'>
       {postsToDisplay}
-    </div>
+    </section>
   )
 }
 

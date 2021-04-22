@@ -10,7 +10,6 @@ const UserInteractions = ({ isHome, user, determineSearchResults }) => {
   const [formModalIsOpen, setFormModal] = useState(false)
 
   const toggleFormModal = () => {
-    console.log('MODAL - IS OPEN? >>> ', formModalIsOpen);
     const modalStatus = formModalIsOpen === false ? true : false;
     setFormModal(modalStatus)
   }
