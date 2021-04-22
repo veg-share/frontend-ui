@@ -25,7 +25,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
     return posts.sort((a, b) => {
       if (a.post.createdAt < b.post.createdAt) {
         return -1;
-      } else if (a.post.createdAt == b.post.createdAt) {
+      } else if (a.post.createdAt === b.post.createdAt) {
         return 0;
       } else {
         return 1;

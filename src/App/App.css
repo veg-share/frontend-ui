@@ -14,7 +14,25 @@ html {
   flex-direction: column;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #000;
+  padding: 2rem;
+  max-width: 25%;
+  min-height: 5%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
