@@ -1,4 +1,4 @@
-describe('VegShare, main page view', () => {
+describe('Garden Party, main page view', () => {
   beforeEach(() => {
     cy.visit('/')
   })
@@ -42,9 +42,40 @@ describe('VegShare, main page view', () => {
       .get('.home-view').should('be.visible')
       .find('.feed-container .feed-title').should('contain', 'All Posts')
 
-      .get('.home-view .feed-container')
-      .get('.post-container')
+      .get('.home-view .feed-container .post-container')
       .find('.single-post').should('have.length', 350)
   });
 
+  // it ('Should display user interactions on the home page',  () => {
+  //   cy
+  //     .get('.home-view').should('be.visible')
+  //     .find('.feed-container .feed-title').should('contain', 'All Posts')
+
+  //     .get('.home-view .feed-container .post-container')
+  //     .find('.single-post').should('have.length', 350)
+  // });
+
+  it ('Should be able to search posts by type of veg offered', () => {
+    cy
+    .get('.interactions-container .search .search-bar[type=text]')
+    .type('carrot')
+    .get('.interactions-container .search .search-button')
+    .click()
+
+    .get('.home-view .feed-container .post-container')
+    .find('.single-post').should('have.length', 14)
+
+    .get('.interactions-container .search .clear-button')
+    .click()
+    .get('.home-view .feed-container .post-container')
+    .find('.single-post').should('have.length', 350)
+
+    .get('.interactions-container .search .search-bar[type=text]')
+    .type('tomato')
+    .get('.interactions-container .search .search-button')
+    .click()
+
+    .get('.home-view .feed-container .post-container')
+    .find('.single-post').should('have.length', 4)
+  })
 })

@@ -18,6 +18,12 @@ const Header = () => {
       <h1 className='veg-share-title'>Garden Party 
         <img src={veggieIcon} alt='carrot icon' className='veggie-img'/>
       </h1>
+
+      {/* <Link className='home-title-link' to='/' onClick={() => toggleLink()}>
+        <h1 className='veg-share-title'>Garden Party</h1>
+        <img src={veggieIcon} alt='carrot icon' className='veggie-img'/>
+      </Link> */}
+
       <div className='header-links'>
         <button className='link-button'>
           <Link className='home-link hidden' to='/' onClick={() => toggleLink()}>Home</Link>
