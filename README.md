@@ -40,6 +40,16 @@ Check out the backend repository [here](https://github.com/veg-share/backend-api
 
 ## Challenges and Wins 
 
+**Challenges:**
+- Setting up continuous integration / continuous deployment; trying to deploy our app to Heroku through TravisCI while also integrating Cypress testing turned out to be more trouble than it was worth. After running into so many roadblocks we transitioned to another deployment site.
+- Too much focus on our individual repos and not enough focus on communication between frontend and backend teams set us up for differing expectations on data structure.
+- Learning how to use graphQL effectively on the frontend.
+
+**Wins:**
+- Achieving continuous deployment / continuous integration on the frontend repo using Vercel.com and GitHub Actions to check for deployment status and passing Cypress tests.
+- Creating a PWA that successfully installs on a mobile device.
+- Retrieving and displaying data from the backend server using graphQL queries.
+
 ## Tech Stack 
 We used a combination of the following technologies/tools:
 * React 
@@ -52,3 +62,8 @@ We used a combination of the following technologies/tools:
 * GitHub Projects
 
 ## Future Iterations
+- Pagination for the data being retrieved from the backend server so that only 10-20 posts appear at a time on the main feed.
+- Integrating image functionality - be able to retrieve image files from active storage on the backend as well as being able to upload an image taken from a mobile device.
+- Increase the post functionality for the user - let a user post to the backend server including location, tags, etc.
+- Add location services - integrate a geolocation API so that only posts within a certain distance appear in the user’s feed. Also update the search function so that a user can change the area they want to look in.
+- Add use of the tags included in the data - let a user see more related info about the posts.
