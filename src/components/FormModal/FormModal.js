@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './FormModal.css';
 
-const FormModal = ({ user, toggleFormModal }) => {
+const FormModal = ({ user, toggleFormModal, addPost }) => {
   const [title, setPostTitle] = useState('')
   const [description, setPostDescription] = useState('')
   const [image, setPostImageUrl] = useState('')
@@ -13,19 +13,16 @@ const FormModal = ({ user, toggleFormModal }) => {
     const newPost = {
       id: Date.now(),
       date: new Date().toLocaleDateString(),
-      postedById: user.id,
-      postedBy: user.name,
+      userId: user.id,
+      user: user,
       location: user.location,
       title,
       description,
       image
     }
 
-    console.log("POST to be submitted! >>> ", newPost)
-
-    // props.addPost(newPost);
-    //// create (/ & pass in) a function which will actually sent this post in a request to the BE
-
+    user.posts.unshift(newPost)
+    addPost(newPost);
     toggleFormModal();
     clearInputs();
   }
@@ -83,7 +80,6 @@ const FormModal = ({ user, toggleFormModal }) => {
           value={ quantity }
           aria-label="field to input amount per item offered in eaches"
         />
-
       <input
           className="post__weight-input"
           type="text"
@@ -100,6 +96,7 @@ const FormModal = ({ user, toggleFormModal }) => {
 FormModal.propTypes = {
   user: PropTypes.object.isRequired,
   toggleFormModal: PropTypes.func,
+  addPost: PropTypes.func,
 }
 
 export default FormModal;
