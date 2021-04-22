@@ -1,6 +1,12 @@
 describe('Garden Party, profile page view', () => {
-  beforeEach(() => {
-    cy.visit('/profile')
+  before(() => {
+    cy
+      .visit('/')
+
+    cy
+      .get('header .header-links')
+      .find('.link-button .profile-link')
+      .click()
   })
 
   // it ('Should show a loading status while fetching posts', () => {
@@ -9,33 +15,16 @@ describe('Garden Party, profile page view', () => {
   //     .should('be.visible')
   // });
 
+  it ('Should have the correct url when routed to the profile page', () => {
+    cy
+      .url().should('include', '/profile')
+  })
+
   it ('should show the site header', () => {
     cy
       .get('header').should('be.visible')
       .find('.veg-share-title').should('contain', 'Garden Party')
   });
-
-  // it ('should be able to navigate between home and profile views', () => {
-  //   cy
-  //     .get('header .header-links')
-  //     .find('.link-button .home-link').should('have.class', 'hidden')
-  //     .get('header .header-links')
-  //     .find('.link-button .profile-link').should('contain', 'Profile')
-  //     .should('have.attr', 'href', '/profile')
-  //     .click()
-
-  //     .url().should('include', '/profile')
-  //     .get('header .header-links')
-  //     .find('.link-button .profile-link').should('have.class', 'hidden')
-
-  //     .get('header .header-links')
-  //     .find('.link-button .home-link').should('contain', 'Home')
-  //     .should('have.attr', 'href', '/')
-  //     .click()
-
-  //     .get('header .header-links')
-  //     .find('.link-button .home-link').should('have.class', 'hidden')
-  // });
 
   // it ('Should display all posts on the home page by default',  () => {
   //   cy
@@ -46,5 +35,11 @@ describe('Garden Party, profile page view', () => {
   //     .find('.single-post').should('have.length', 350)
   // });
 
-
+  it ('should be able to navigate back to home', () => {
+    cy
+      .get('header .header-links')
+      .find('.link-button .home-link').should('contain', 'Home')
+      .should('have.attr', 'href', '/')
+      .click()
+  });
 })

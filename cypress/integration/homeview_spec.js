@@ -1,5 +1,5 @@
 describe('Garden Party, main page view', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit('/')
   })
 
