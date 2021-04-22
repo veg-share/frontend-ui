@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import './FormModal.css';
 
-// import { user } from '../../Data/mockData';
-
 const FormModal = ({ user, toggleFormModal, addPost }) => {
   const [title, setPostTitle] = useState('')
   const [description, setPostDescription] = useState('')
@@ -23,7 +21,7 @@ const FormModal = ({ user, toggleFormModal, addPost }) => {
       image
     }
 
-    user.posts.push(newPost)
+    user.posts.unshift(newPost)
     addPost(newPost);
     toggleFormModal();
     clearInputs();
