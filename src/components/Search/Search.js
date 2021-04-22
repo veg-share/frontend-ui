@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
-import './Search.css';
 import AppContext from '../../Context/AppContext';
+
+import './Search.css';
 
 const Search = ({ determineSearchResults }) => {
   const [searchInput, setSearchInput] = useState('')

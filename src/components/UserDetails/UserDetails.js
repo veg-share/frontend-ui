@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import profilePic from '../../Images/user.png';
 import homeIcon from '../../Images/home2.png';
 import veggieIcon from '../../Images/carrot2.png';
+
 import './UserDetails.css';
 
 const UserDetails = ({user}) => {

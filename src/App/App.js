@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import AppContext from '../Context/AppContext';
+import { useQuery, gql } from '@apollo/client';
+
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import HomeView from '../views/HomeView/HomeView';
 import ProfileView from '../views/ProfileView/ProfileView';
-import AppContext from '../Context/AppContext';
-import { useQuery, gql } from '@apollo/client';
+
 import loading from '../Images/loading.png';
 
 import './App.css';

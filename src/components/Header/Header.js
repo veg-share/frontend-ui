@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import veggieIcon from '../../Images/carrot2.png';
 
 import './Header.css';

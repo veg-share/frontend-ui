@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import profilePic from '../../Images/user.png';
+
 import './Post.css';
 
 const Post = ({ title, date, description, username }) => {
@@ -27,7 +28,8 @@ Post.propTypes = {
   userName: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
-  location: PropTypes.object,
+  // location: PropTypes.object,
+  location: PropTypes.string,
   description: PropTypes.string,
   distance: PropTypes.string,
   imageUrl: PropTypes.string,
