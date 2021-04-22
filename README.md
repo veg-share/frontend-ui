@@ -8,6 +8,9 @@ View the deployed app [here](https://gardenparty.vercel.app/).
 
 Check out the backend repository [here](https://github.com/veg-share/backend-api).
 
+![screenshot of home page](https://user-images.githubusercontent.com/69813722/115750499-770fbd80-a355-11eb-846f-995d3b4f9245.png)
+![screenshot of profile page](https://user-images.githubusercontent.com/69813722/115750701-b0482d80-a355-11eb-9417-d59144d50bae.png)
+
 ## Frontend Contributors
 
 - Allison Dietz: [github.profile](https://github.com/dietza)
@@ -36,9 +39,6 @@ Check out the backend repository [here](https://github.com/veg-share/backend-api
 4. The app should open automatically, but you can also navigate to [http://localhost:3000](http://localhost:3000) to view the app in the browser (a PWA can not be installed in development mode).
 
 5. To start the Cypress test suite, enter ```npm run cypress```from the project directory.
-
-![screenshot of home page](https://user-images.githubusercontent.com/69813722/115750499-770fbd80-a355-11eb-846f-995d3b4f9245.png)
-![screenshot of profile page](https://user-images.githubusercontent.com/69813722/115750444-69f2ce80-a355-11eb-9a85-023f9c891cbf.png)
 
 ## Challenges and Wins 
 
