@@ -78,6 +78,7 @@ const Feed = ({ profileIsVisible, searchResults }) => {
 
 Feed.propTypes = {
   profileIsVisible: PropTypes.bool,
+  searchResults: PropTypes.array,
 }
 
 export default Feed;

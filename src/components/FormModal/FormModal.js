@@ -98,6 +98,7 @@ const FormModal = ({ user, toggleFormModal, addPost }) => {
 FormModal.propTypes = {
   user: PropTypes.object.isRequired,
   toggleFormModal: PropTypes.func,
+  addPost: PropTypes.func,
 }
 
 export default FormModal;

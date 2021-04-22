@@ -33,6 +33,7 @@ const UserInteractions = ({ isHome, user, determineSearchResults, addPost }) => 
 UserInteractions.propTypes = {
   user: PropTypes.object.isRequired,
   isHome: PropTypes.bool,
+  determineSearchResults: PropTypes.func,
   addPost: PropTypes.func,
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import AppContext from '../../Context/AppContext';
+import PropTypes from 'prop-types';
 
 import './Search.css';
 
@@ -54,6 +55,10 @@ const Search = ({ determineSearchResults }) => {
         </button>
     </form>
   )
+}
+
+Search.propTypes = {
+  determineSearchResults: PropTypes.func,
 }
 
 export default Search;

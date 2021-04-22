@@ -25,7 +25,7 @@ const Post = ({ title, date, description, username }) => {
 }
 
 Post.propTypes = {
-  userName: PropTypes.string,
+  username: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
   // location: PropTypes.object,
