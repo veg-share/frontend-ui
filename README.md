@@ -1,8 +1,8 @@
 # Garden Party Frontend UI
 
-Garden Party is a Progressive Web Application (PWA) that allows home gardeners to find and share surplus harvest with their community. A user can create a post with a title, description, and image, as well as search posts from all users.
+[Garden Party](https://gardenparty.vercel.app/) is a Progressive Web Application (PWA) that allows home gardeners to find and share surplus harvest with their community. A user can create a post with a title, description, and image, as well as search posts from all users.
 
-This project was built by a team of five software engineers at the [Turing School of Software & Design](https://turing.edu/). It is composed of a frontend application built with React and a backend application built using Ruby on Rails and GraphQL.
+This project was built by a team of five software engineers at the [Turing School of Software & Design](https://turing.edu/). It is composed of a frontend application built with React and a backend application built using Ruby on Rails and GraphQL. Here is the spec sheet that guided this project: [Spec](https://mod4.turing.edu/projects/capstone.html), and our initial wireframes and design inspiration: [Wireframe](https://miro.com/app/board/o9J_lLCjO7g=/).
 
 View the deployed app [here](https://gardenparty.vercel.app/).
 
@@ -15,28 +15,30 @@ Check out the backend repository [here](https://github.com/veg-share/backend-api
 - Christina Cook: [github profile](https://github.com/christina-cook)
 
 ## Table of Contents
-1. [Instructions](#set-up-instructions)
-2. [How-To](#using-the-app)
-3. [Challenges and Wins](#challenges-and-wins)
-4. [Tech Stack](#tech-stack)
-5. [Future Iterations](#future-iterations)
-
-## Set-Up Instructions
-1. Clone the repository
-```git@github.com:veg-share/frontend-ui.git```
-
-2. Install dependencies
-```npm install```
-
-3. Start the server
-```npm start```
-
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
-
-5. Start the test suite
-```npm run cypress```
+1. [Using the App](#using-the-app)
+2. [Challenges and Wins](#challenges-and-wins)
+3. [Tech Stack](#tech-stack)
+4. [Future Iterations](#future-iterations)
 
 ## Using the App
+
+**To use the deployed app:**
+- Visit the deployed site [here](https://gardenparty.vercel.app/)
+- An option to install the app as a PWA should appear in the URL bar or as a pop-up on a mobile device. If not, you may have to look in your browser’s options menu to install the app.
+
+**To add more features to this project, or to simply view the code in action:**
+1. Clone this repository (or first fork it and then clone) using git clone ```git@github.com:veg-share/frontend-ui.git [OPTIONAL DIRECTORY NAME]``` inside of your terminal.
+
+2. Install any necessary dependencies using ```npm install```.
+
+3. Start the server ```npm start``` or open the code in your text editor.
+
+4. The app should open automatically, but you can also navigate to [http://localhost:3000](http://localhost:3000) to view the app in the browser (a PWA can not be installed in development mode).
+
+5. To start the Cypress test suite, enter ```npm run cypress```from the project directory.
+
+![screenshot of home page](https://user-images.githubusercontent.com/69813722/115750499-770fbd80-a355-11eb-846f-995d3b4f9245.png)
+![screenshot of profile page](https://user-images.githubusercontent.com/69813722/115750444-69f2ce80-a355-11eb-9a85-023f9c891cbf.png)
 
 ## Challenges and Wins 
 
